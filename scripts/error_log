@@ -1,0 +1,156 @@
+[18-Mar-2013 08:47:21] PHP Parse error:  syntax error, unexpected T_ELSE in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 99
+[18-Mar-2013 08:47:44] PHP Parse error:  syntax error, unexpected T_ELSE in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 99
+[18-Mar-2013 08:49:05] PHP Warning:  imagecreatefrompng() [<a href='function.imagecreatefrompng'>function.imagecreatefrompng</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 54
+[18-Mar-2013 08:49:05] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:49:05] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:49:05] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:49:05] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:49:05] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:49:05] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:49:05] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 88
+[18-Mar-2013 08:49:05] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 89
+[18-Mar-2013 08:49:43] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:49:43] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:49:43] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:49:43] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:49:43] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:49:43] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:49:43] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:49:43] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 88
+[18-Mar-2013 08:49:43] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 89
+[18-Mar-2013 08:50:38] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:50:38] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:50:38] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:50:38] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:50:38] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:50:38] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:50:38] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:51:58] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:51:58] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:51:58] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:51:58] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:51:58] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:51:58] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:51:58] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:52:08] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:52:08] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:52:08] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:52:08] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:52:08] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:52:08] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:52:08] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:53:18] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:53:18] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:53:18] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:53:18] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:53:18] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:53:18] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:53:18] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:53:41] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:53:41] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:53:41] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:53:41] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:53:41] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:53:41] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:53:41] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:54:33] PHP Parse error:  syntax error, unexpected '{' in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 83
+[18-Mar-2013 08:54:44] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:54:44] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:54:44] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:54:44] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:54:44] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:54:44] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:54:44] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:54:44] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 83
+[18-Mar-2013 08:54:58] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:54:58] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 62
+[18-Mar-2013 08:54:58] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 63
+[18-Mar-2013 08:54:58] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:54:58] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 67
+[18-Mar-2013 08:54:58] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:54:58] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:54:58] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 83
+[18-Mar-2013 08:56:38] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:56:38] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 08:56:38] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 08:56:38] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:56:38] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 08:56:38] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:56:38] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:56:38] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 86
+[18-Mar-2013 08:56:43] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:56:43] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 08:56:43] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 08:56:43] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:56:43] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 08:56:43] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:56:43] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:56:43] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 86
+[18-Mar-2013 08:59:24] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 08:59:24] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 08:59:24] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 08:59:24] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 08:59:24] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 08:59:24] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 08:59:24] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 08:59:24] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 86
+[18-Mar-2013 08:59:24] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 89
+[18-Mar-2013 08:59:24] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 90
+[18-Mar-2013 09:01:09] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 09:01:09] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 09:01:09] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 09:01:09] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 09:01:09] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 09:01:09] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 09:01:09] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 09:01:09] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 89
+[18-Mar-2013 09:01:09] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 92
+[18-Mar-2013 09:01:09] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 93
+[18-Mar-2013 09:01:32] PHP Warning:  imagecreatefrompng() [<a href='function.imagecreatefrompng'>function.imagecreatefrompng</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 54
+[18-Mar-2013 09:01:32] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 09:01:32] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 09:01:32] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 09:01:32] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 09:01:32] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 09:01:32] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 09:01:32] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 89
+[18-Mar-2013 09:01:32] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 92
+[18-Mar-2013 09:01:32] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 93
+[18-Mar-2013 09:01:49] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 09:01:49] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 09:01:49] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 09:01:49] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 09:01:49] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 09:01:49] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 09:01:49] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 09:01:49] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 89
+[18-Mar-2013 09:01:49] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 92
+[18-Mar-2013 09:01:49] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 93
+[18-Mar-2013 09:02:23] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 09:02:23] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 09:02:23] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 09:02:23] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 09:02:23] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 09:02:23] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 09:02:23] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 09:02:23] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 87
+[18-Mar-2013 09:02:23] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 92
+[18-Mar-2013 09:02:23] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 93
+[18-Mar-2013 09:03:16] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 49
+[18-Mar-2013 09:03:16] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 61
+[18-Mar-2013 09:03:16] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 65
+[18-Mar-2013 09:03:16] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 66
+[18-Mar-2013 09:03:16] PHP Warning:  Division by zero in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 69
+[18-Mar-2013 09:03:16] PHP Warning:  imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 70
+[18-Mar-2013 09:03:16] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 73
+[18-Mar-2013 09:03:16] PHP Warning:  imagejpeg(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 89
+[18-Mar-2013 09:03:16] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 92
+[18-Mar-2013 09:03:16] PHP Warning:  imagedestroy(): supplied argument is not a valid Image resource in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 93
+[18-Mar-2013 10:46:53] PHP Parse error:  syntax error, unexpected '}' in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 82
+[18-Mar-2013 10:47:02] PHP Parse error:  syntax error, unexpected '}' in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 82
+[18-Mar-2013 10:47:30] PHP Warning:  getimagesize(Array) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 20
+[18-Mar-2013 10:47:34] PHP Warning:  getimagesize(Array) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 20
+[18-Mar-2013 10:47:53] PHP Warning:  getimagesize(Array) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 20
+[18-Mar-2013 10:48:02] PHP Warning:  getimagesize(Array) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 20
+[18-Mar-2013 10:49:33] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 20
+[20-Mar-2013 10:22:10] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home1/daveoste/public_html/davestrap/thestrap/scripts/upload.php on line 20

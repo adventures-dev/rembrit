@@ -1,0 +1,216 @@
+.feed{
+}
+.top{
+	font-size: small;
+	text-align: left;
+	padding: 0px 10px;
+	
+}
+.buttons{
+	font-size: small;
+	text-align: left;
+	padding: 0px 10px;
+	
+}
+.buttons a{
+	color: #5e5e5e
+}
+.edit_submit{
+	opacity: .9;
+
+}
+.edit_text{
+	
+	width: 92%;
+	background: rgba(0,0,0,0.8);
+	color: white;
+	border-style: none;
+	border-radius: 0px;
+	text-align: center;
+
+}
+
+.edit_text_wrapper{
+	position: absolute;
+	padding: 20px;
+	height: 100px;
+	width: 100%;
+}
+
+.droptext{
+	  width: 96%;
+	border-radius:10px;
+	border-style: dashed;
+	border-color: #cacaca;
+	position: relative;
+	min-height: 100px;
+	overflow: hidden;
+	padding: 2%;
+	margin: 20px;
+	
+}
+.droptext textarea{
+
+}
+.thetext{
+	background: white;
+	width: 92%;
+	border-style: dotted;
+	border-color: #cacaca;
+	padding: 15px;
+}	
+.text-wrapper{
+  	width: 100%;
+	border-style: dashed;
+	border-color: transparent;
+	position: relative;
+	overflow: hidden;
+	padding: 4px;
+	text-align: center;
+	margin: 20px;
+	background: whitesmoke;
+}
+.image-wrapper{
+	
+  	width: 100%;
+	border-style: dashed;
+	border-color: transparent;
+	position: relative;
+	overflow: hidden;
+	padding: 3px;
+	margin: 20px;
+	background: whitesmoke;
+}
+
+video{
+	width: 100%;
+	background: black;
+	
+}	
+img{
+}						
+/*-------------------------
+	Dropbox Element
+--------------------------*/
+
+.textbox{
+		
+    width: 100%;
+	border-radius:10px;
+	border-style: dashed;
+	border-color: #cacaca;
+	position: relative;
+	min-height: 100px;
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+	margin: 20px;
+
+}
+.textbox textarea{
+	border: none;
+
+}
+.textbox textarea:focus{
+	outline: none;
+}
+.dropbox{
+		
+    width: 100%;
+	border-radius:10px;
+	border-style: dashed;
+	border-color: #cacaca;
+	position: relative;
+	min-height: 100px;
+	overflow: hidden;
+	padding: 3px;
+	text-align: center;
+	margin: 20px;
+
+}
+
+
+.dropbox .message{
+	font-size: 20px;
+    padding-top:25px;
+    display: block;
+    	color:#ccc;
+
+}
+
+
+.dropbox:before{
+	border-radius:3px 3px 0 0;
+}
+
+
+
+/*-------------------------
+	Image Previews
+--------------------------*/
+
+
+
+.dropbox .preview, .image-wrapper .preview{
+	width:100%;
+	height: 100%;
+	float:left;
+	position: relative;
+	text-align: center;
+}
+
+.preview img{
+	width: 100%;
+	display: block;
+}
+
+.dropbox .imageHolder, .image-wrapper .imageHolder{
+	display: inline-block;
+	position:relative;
+	
+}
+
+.dropbox .uploaded{
+	
+}
+
+.dropbox .preview.done .uploaded{
+	display: block;
+}
+
+
+
+/*-------------------------
+	Progress Bars
+--------------------------*/
+
+
+
+.dropbox .progressHolder{
+	position: absolute;
+	background-color:#00b641;
+	height:12px;
+	width:100%;
+	left:0;
+	bottom: 0;
+	
+	box-shadow:0 0 2px #000;
+}
+
+.dropbox .progress{
+	background-color:#007a2b;
+	position: absolute;
+	z-index: 100;
+	height:100%;
+	left:0;
+	width:0;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	-moz-transition:0.25s;
+	-webkit-transition:0.25s;
+	-o-transition:0.25s;
+	transition:0.25s;
+}
+
+.dropbox .preview.done .progress{
+	width:100% !important;
+}
