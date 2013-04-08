@@ -11,7 +11,6 @@ $(function () {
         url: 'post_file.php',
 
         uploadFinished: function (i, file, response) {
-        	console.log(response);
         
             $(".progressHolder").remove();
             
@@ -78,11 +77,9 @@ $(function () {
     
 
         var imageTemplate = '<div class="image-wrapper" data-internalid="'+id+'">'+
-            '<div class="preview">' +
             '<span class="imageHolder">' +
             '<img />' +
             '</span>' +
-            '</div>'+
         '</div>';
 
 
@@ -97,18 +94,41 @@ $(function () {
             // e.target.result holds the DataURL which
             // can be used as a source of the image:
             image.attr('src', e.target.result);
+            
         };
+        
+        
         
         // Reading the file as a DataURL. When finished,
         // this will trigger the onload function above:
         reader.readAsDataURL(file);
 
-        feed.prepend(preview);
         
         // Associating a preview container
         // with the file, using jQuery's $.data():
 
         $.data(file, image);
+        
+        
+           			var now = new Date(); 
+					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
+						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
+    	          	var	date = prettyDate(then);
+                    var buttons = '<div class="buttons"><a href="" class="delete_button" data-internalid="' + id+ '"><i class="icon-minus-sign"></i> delete</a></div>';
+                   var sidehtml = '<div class="text-wrapper" data-internalid="' + id + '">'+
+                      			'<p>posted '+date+'</p>'+buttons+
+                   				'</div><hr>';
+
+                  $("#feed").prepend("<div class='row-fluid item' data-internalid='"+id+"'><div class='span4 off-white-bg'>"+sidehtml+"</div><div class='span8 main_image' data-internalid='" + id+ "'></div></div>");
+
+                  $(".main_image").each(function(){
+	                  if($(this).attr("data-internalid") === id.toString()){
+		                  $(this).append(preview);
+	                  }
+                  })
+                   				
+                   triggerStuff();
+        
     }
 
     function createImage(file) {

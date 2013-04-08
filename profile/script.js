@@ -56,7 +56,7 @@
               for (var i = 0; i < res.length; i++) {
                   //use this section to display all the data, use some .append() or something
 
-
+                 
 
                       var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">'+
                           '<div class="preview">' +
@@ -66,35 +66,26 @@
                           '</div>'+
                       '</div>';
     
-                      $("#feed").append(html);
+                  
                       
-                      $("img.image").load(function(){                      	 
-	                      var id = $(this).attr("data-internalid");
-	                      var height = $(this).height();
-	                      $(".text-wrapper").each(function(){
-		                      if($(this).attr("data-internalid") === id){
-		                      	 console.log(height);
-			                      $(this).height(height-10);
-		                      }
-	                      })
-	                      
-                      });
+                
                       
                     var now = new Date(res[i]["datetime"]); 
 					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
 						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
     	          	var	date = prettyDate(then);
-                      
+                    var buttons = '<div class="buttons"><a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
                    var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">'+
-                      			'<p>posted '+date+'</p>'+
+                      			'<p>posted '+date+buttons+'</p>'+
                       
                    				'</div><hr>';
           
-                   				$("#sidefeed").append(sidehtml);
+                   			
 
-
+                   				    $("#feed").append("<div class='row-fluid item' data-internalid='" + res[i]["id"] + "'><div class='span4 off-white-bg'>"+sidehtml+"</div><div class='span8'>"+html+"</div></div>");
                   number++;
               }
+              triggerStuff();
 
 
               if (res.length == 0) { //no date left :( sad day
@@ -107,3 +98,56 @@
           }
       });
   }
+  
+  
+  
+  function triggerStuff() {
+   
+      $(".delete_button").unbind("click");
+      $('.delete_button').click(function (event) {
+          event.preventDefault();
+          if (confirm("Are you sure you want to delete this item?")) {
+
+              var id = $(this).attr("data-internalid");
+              var button = $(this);
+
+              var data = {
+                  id: id,
+              };
+              $.ajax({
+                  type: "POST",
+                  url: "delete_photo.php",
+                  data: data,
+                  success: function (res) {
+                      button.parent(".buttons").parent(".image-wrapper").fadeOut();
+                      
+                      $(".item").each(function(){
+	                     	if($(this).attr("data-internalid") === id){
+		                     	
+		                     	$(this).fadeOut();
+	                     	} 
+                      });
+                
+                      
+                      
+                      button.parent(".buttons").parent(".text-wrapper").fadeOut();
+
+                      if (res == true) {
+                          //success action
+
+                      } else {
+                          //failure action
+                      }
+
+                  }
+              });
+          } else {
+              return false;
+          }
+
+      });
+
+
+
+  }
+  

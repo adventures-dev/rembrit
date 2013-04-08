@@ -22,12 +22,8 @@
 				</div>
 			</div>
 		<div class="row-fluid">
-		<div class="span4 off-white-bg">
-			<div id="sidefeed">
-			</div>
-			
-		</div>
-			<div class="span8 off-white-bg">
+			<div class="span12">
+		
 					<div class="feed" id='feed'>	
 						
 					</div>
