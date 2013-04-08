@@ -46,8 +46,11 @@
 	min-height: 100px;
 	overflow: hidden;
 	padding: 2%;
-	margin: 20px;
 	
+}
+hr{
+	margin: 0px;
+	padding: 0px;
 }
 .droptext textarea{
 
@@ -61,14 +64,8 @@
 }	
 .text-wrapper{
   	width: 100%;
-	border-style: dashed;
-	border-color: transparent;
-	position: relative;
-	overflow: hidden;
-	padding: 4px;
-	text-align: center;
-	margin: 20px;
-	background: whitesmoke;
+  	margin-bottom: 14px;
+  	padding: 5px;
 }
 .image-wrapper{
 	
@@ -77,8 +74,6 @@
 	border-color: transparent;
 	position: relative;
 	overflow: hidden;
-	padding: 3px;
-	margin: 20px;
 	background: whitesmoke;
 }
 
@@ -123,9 +118,8 @@ img{
 	position: relative;
 	min-height: 100px;
 	overflow: hidden;
-	padding: 3px;
 	text-align: center;
-	margin: 20px;
+	margin-bottom: 20px;
 
 }
 

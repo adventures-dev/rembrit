@@ -21,7 +21,7 @@ $(function () {
     
                  displayImage(file, $("#feed"), response);
 
-                $("#feed").prepend($("#dropbox"));
+        message.show();
 
         },
 

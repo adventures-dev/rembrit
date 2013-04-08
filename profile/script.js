@@ -15,6 +15,26 @@
 
   });
 
+    
+	function prettyDate(time){
+	
+		var date = new Date((time || "").replace(/-/g,"/").replace(/[TZ]/g," ")),
+			diff = (((new Date()).getTime() - date.getTime()) / 1000),
+			day_diff = Math.floor(diff / 86400);
+		
+		if ( isNaN(day_diff) || day_diff < 0 || day_diff >= 31 )
+			return;
+		return day_diff == 0 && (
+				diff < 60 && "just now" ||
+				diff < 120 && "1 minute ago" ||
+				diff < 3600 && Math.floor( diff / 60 ) + " minutes ago" ||
+				diff < 7200 && "1 hour ago" ||
+				diff < 86400 && Math.floor( diff / 3600 ) + " hours ago") ||
+			day_diff == 1 && "Yesterday" ||
+			day_diff < 7 && day_diff + " days ago" ||
+			day_diff < 31 && Math.ceil( day_diff / 7 ) + " weeks ago";
+	}
+
   function getData() {
 
       loading = true;
@@ -41,15 +61,37 @@
                       var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">'+
                           '<div class="preview">' +
                           '<span class="imageHolder">' +
-                          '<img src = "' + res[i]['location'] + '">' +
+                          '<img class="image" data-internalid="' + res[i]["id"] + '" src = "' + res[i]['location'] + '">' +
                           '</span>' +
                           '</div>'+
-
                       '</div>';
     
                       $("#feed").append(html);
+                      
+                      $("img.image").load(function(){                      	 
+	                      var id = $(this).attr("data-internalid");
+	                      var height = $(this).height();
+	                      $(".text-wrapper").each(function(){
+		                      if($(this).attr("data-internalid") === id){
+		                      	 console.log(height);
+			                      $(this).height(height-10);
+		                      }
+	                      })
+	                      
+                      });
+                      
+                    var now = new Date(res[i]["datetime"]); 
+					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
+						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
+    	          	var	date = prettyDate(then);
+                      
+                   var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">'+
+                      			'<p>posted '+date+'</p>'+
+                      
+                   				'</div><hr>';
           
-                  
+                   				$("#sidefeed").append(sidehtml);
+
 
                   number++;
               }

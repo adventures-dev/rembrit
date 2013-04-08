@@ -12,13 +12,24 @@
 <!--body goes here-->
 <div class="white-bg">
 	<div class="container">
-		<div class="row-fluid">
-			<div class="span4">
-					<div class="feed" id='feed'>	
-							<div class="dropbox" id="dropbox">
+			<div class="row-fluid">
+				<div class="span4"></div>
+				<div class="span8">
+						<div class="dropbox" id="dropbox">
 							
-							<span class="message"><i class="icon-plus-sign"></i> Drag files to upload<br>or click to type</span>
+							<span class="message"><i class="icon-plus-sign"></i> Drag files to upload</span>
 							</div>
+				</div>
+			</div>
+		<div class="row-fluid">
+		<div class="span4 off-white-bg">
+			<div id="sidefeed">
+			</div>
+			
+		</div>
+			<div class="span8 off-white-bg">
+					<div class="feed" id='feed'>	
+						
 					</div>
 			</div>
 		</div>
