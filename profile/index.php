@@ -13,21 +13,32 @@
 <div class="white-bg">
 	<div class="container">
 			<div class="row-fluid">
-				<div class="span4"></div>
-				<div class="span8">
+				<div class="span3"></div>
+				<div class="span6">
 						<div class="dropbox" id="dropbox">
 							
 							<span class="message"><i class="icon-plus-sign"></i> Drag files to upload</span>
 							</div>
 				</div>
+				<div class="span3"></div>
+
 			</div>
 		<div class="row-fluid">
-			<div class="span12">
+			<div class="span9">
 		
 					<div class="feed" id='feed'>	
 						
 					</div>
 			</div>
+			<div class="span3">
+				
+				<h4>Info</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><hr>
+				
+				<h4>Info</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><hr>
+			</div>
+
 		</div>
 	
 	

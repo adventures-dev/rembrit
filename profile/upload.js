@@ -113,9 +113,14 @@ $(function () {
 					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
 						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
     	          	var	date = prettyDate(then);
-                    var buttons = '<div class="buttons"><a href="" class="delete_button" data-internalid="' + id+ '"><i class="icon-minus-sign"></i> delete</a></div>';
+                     var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + id + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + id + '"><i class="icon-minus-sign"></i> delete</a></div>';
+
+                        var text = "<div class='side_text' data-internalid='" + id + "'><p></p></div>";
+                    var textbox = "<div class='side_textbox hide' data-internalid='" + id + "'><textarea class='input-block-level side_textarea' data-internalid='" + id + "'></textarea><button class='btn side_textbutton' data-internalid='" + id + "'>Edit</button></div>";
+
                    var sidehtml = '<div class="text-wrapper" data-internalid="' + id + '">'+
-                      			'<p>posted '+date+'</p>'+buttons+
+                      			'<p>posted '+date+'</p>'+text+textbox+buttons+
+                      
                    				'</div><hr>';
 
                   $("#feed").prepend("<div class='row-fluid item' data-internalid='"+id+"'><div class='span4'>"+sidehtml+"</div><div class='span8 main_image' data-internalid='" + id+ "'></div></div>");
