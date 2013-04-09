@@ -13,7 +13,7 @@ $(function () {
         uploadFinished: function (i, file, response) {
         
             $(".progressHolder").remove();
-            
+            console.log(response);
                
                 $("#dropbox").children(".preview").remove();
 
@@ -108,7 +108,6 @@ $(function () {
         // with the file, using jQuery's $.data():
 
         $.data(file, image);
-        
         
            			var now = new Date(); 
 					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 

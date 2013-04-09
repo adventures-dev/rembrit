@@ -82,7 +82,7 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 						echo mysql_insert_id();
 					}
 					else
-						exit_status($actual_image_name);
+						exit_status("failed");
 		
 			}else
 				exit_status(  "image must be greater than 200px");
