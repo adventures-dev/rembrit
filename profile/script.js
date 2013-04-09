@@ -74,15 +74,15 @@
 					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
 						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
     	          	var	date = prettyDate(then);
-                    var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
+                    var buttons = '<div class="buttons"><a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
                    var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">'+
-                      			'<p>posted '+date+'</p><div class="text" data-internalid="' + res[i]["id"] + '"><p>'+ res[i]["text"] + '</p></div></p>'+buttons+
+                      			'<p>posted '+date+buttons+'</p>'+
                       
                    				'</div><hr>';
           
                    			
 
-                   				    $("#feed").append("<div class='row-fluid item' data-internalid='" + res[i]["id"] + "'><div class='span4 '>"+sidehtml+"</div><div class='span8'>"+html+"</div></div>");
+                   				    $("#feed").append("<div class='row-fluid item' data-internalid='" + res[i]["id"] + "'><div class='span4 off-white-bg'>"+sidehtml+"</div><div class='span8'>"+html+"</div></div>");
                   number++;
               }
               triggerStuff();
@@ -102,10 +102,7 @@
   
   
   function triggerStuff() {
-  
-	  
-  
-          
+   
       $(".delete_button").unbind("click");
       $('.delete_button').click(function (event) {
           event.preventDefault();
