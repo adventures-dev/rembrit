@@ -56,8 +56,6 @@
               for (var i = 0; i < res.length; i++) {
                   //use this section to display all the data, use some .append() or something
 
-                 
-
                       var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">'+
                           '<div class="preview">' +
                           '<span class="imageHolder">' +
@@ -65,27 +63,26 @@
                           '</span>' +
                           '</div>'+
                       '</div>';
-    
-                  
-                      
-                
-                      
+
                     var now = new Date(res[i]["datetime"]); 
 					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
 						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
     	          	var	date = prettyDate(then);
-                    var buttons = '<div class="buttons"><a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
+                    var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
+                    var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p>"+res[i]["text"]+"</p></div>";
+                    var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>"+res[i]["text"]+"</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
+
                    var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">'+
-                      			'<p>posted '+date+buttons+'</p>'+
+                      			'<p>posted '+date+'</p>'+text+textbox+buttons+
                       
                    				'</div><hr>';
           
                    			
 
-                   				    $("#feed").append("<div class='row-fluid item' data-internalid='" + res[i]["id"] + "'><div class='span4 off-white-bg'>"+sidehtml+"</div><div class='span8'>"+html+"</div></div>");
+                  $("#feed").append("<div class='row-fluid item' data-internalid='" + res[i]["id"] + "'><div class='span4'>"+sidehtml+"</div><div class='span8'>"+html+"</div></div>");
                   number++;
               }
-              triggerStuff();
+              		triggerStuff();
 
 
               if (res.length == 0) { //no date left :( sad day
@@ -102,6 +99,86 @@
   
   
   function triggerStuff() {
+  
+  	 	$(".side_textbutton").unbind("click");
+      $('.side_textbutton').click(function (event) {
+          event.preventDefault();
+          
+          var id = $(this).attr("data-internalid");
+          var new_text = "";
+          $(".side_textbox").each(function(){
+	         	if($(this).attr("data-internalid")===id){
+		         		new_text = $(this).children(".side_textarea").val();	         
+		         		$(this).slideUp();
+	         	} 
+          });
+          
+          $(".side_text").each(function(){
+	         	if($(this).attr("data-internalid")===id){
+		         		$(this).html("<p>"+new_text+"</p>");
+		         		$(this).slideDown();
+		         }
+          });
+          
+          
+          
+          var data = {
+	          id:id,
+	          text:new_text
+	          
+          };
+          $.ajax({
+               type: "POST",
+               url: "update-text.php",
+               data: data,
+               success: function (res) {
+                    if (res == true) {
+                            //success action
+                    } else {
+                            //failure action
+                    }
+          
+               }
+          });
+          
+      
+          
+          
+
+      });
+
+  
+   
+   	$(".edit_button").unbind("click");
+      $('.edit_button').click(function (event) {
+          event.preventDefault();
+          
+          var id = $(this).attr("data-internalid");
+          
+       
+          
+          $(".side_text").each(function(){
+	         	if($(this).attr("data-internalid")===id){
+	         		if($(this).is(":visible"))
+		         		$(this).slideUp();
+		         	else
+		         		$(this).slideDown();
+	         	} 
+          });
+          $(".side_textbox").each(function(){
+	         	if($(this).attr("data-internalid")===id){
+	         	
+	         		if($(this).is(":visible"))
+		         		$(this).slideUp();
+		         	else
+		         		$(this).slideDown();
+	         	} 
+          });
+          
+          
+
+      });
+
    
       $(".delete_button").unbind("click");
       $('.delete_button').click(function (event) {

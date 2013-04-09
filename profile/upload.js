@@ -118,7 +118,7 @@ $(function () {
                       			'<p>posted '+date+'</p>'+buttons+
                    				'</div><hr>';
 
-                  $("#feed").prepend("<div class='row-fluid item' data-internalid='"+id+"'><div class='span4 off-white-bg'>"+sidehtml+"</div><div class='span8 main_image' data-internalid='" + id+ "'></div></div>");
+                  $("#feed").prepend("<div class='row-fluid item' data-internalid='"+id+"'><div class='span4'>"+sidehtml+"</div><div class='span8 main_image' data-internalid='" + id+ "'></div></div>");
 
                   $(".main_image").each(function(){
 	                  if($(this).attr("data-internalid") === id.toString()){
