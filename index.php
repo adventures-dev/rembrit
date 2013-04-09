@@ -34,7 +34,7 @@
     </head>
     
     <body>
-        <?php include( "scripts/config.php");?><!-- configurations!!-->
+        <?php include( "config.php");?><!-- configurations!!-->
         <?php include( "scripts/dbconnect.php");?><!-- connect to yo database-->
 
         

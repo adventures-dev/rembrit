@@ -1,7 +1,7 @@
 <?php
 function contact($subject, $body, $email)
 {
-    include("config.php");
+    include("../config.php");
     
     $from    = $sesemail;
  

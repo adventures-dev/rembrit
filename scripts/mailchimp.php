@@ -2,7 +2,7 @@
 
 function mailchimp($firstName, $lastName, $email){
 
-    include("config.php");
+    include("../config.php");
 
 	include('MCAPI.class.php');
 
