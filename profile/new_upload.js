@@ -1,6 +1,6 @@
 $(function () {
 
-    var dropbox = $('#new_photo_dropbox'),
+    var dropbox = $('#new_kid_dropbox'),
         message = $('.message', dropbox);
 
     dropbox.filedrop({
@@ -8,7 +8,7 @@ $(function () {
         paramname: 'pic',
         maxfiles: 1,
         maxfilesize: 10,
-        url: 'post_file.php',
+        url: 'post_new_kid_file.php',
         data:{
 	      child:function(){
 		      return current_kid;
@@ -18,7 +18,7 @@ $(function () {
 
             $(".progressHolder").remove();
             
-            $('#new_photo_box').animate({'top':'-1000px'},500,function(){
+            $('#new_kid_photo_box').animate({'top':'-1000px'},500,function(){
            			 $('#overlay').fadeOut('fast');
            			 
 	           		 $("#feed").prepend('<div class="center spinner"><i class="icon-spinner icon-spin icon-2x"></i></div>');
@@ -28,9 +28,10 @@ $(function () {
 	                  getChildData();
 	                  
 	                  
-	                  $("#new_photo_dropbox").children(".preview").remove();
-	                  message.show();
-	 
+	                  $("#new_kid_dropbox").children(".preview").remove();
+
+              
+           			 
             });
 
         },
@@ -85,7 +86,7 @@ $(function () {
         '</div>';
 
     function createImage(file) {
-        var box = $("#new_photo_dropbox");
+        var box = $("#new_kid_dropbox");
 
         var preview = $(template),
             image = $('img', preview);

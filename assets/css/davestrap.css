@@ -130,11 +130,9 @@ line-height: 20px;
 .image-container{
 	text-align: center;
 	overflow: hidden;
-	width:462px;
-	height: 462px;
-	
 
 }
+
 .image-container img{
 	text-align: center;
 }

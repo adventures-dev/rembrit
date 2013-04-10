@@ -7,6 +7,7 @@ include("../scripts/dbconnect.php");
 
 //include post varibles here 
 $number = $_POST['number']; //required
+
 $limitnumber = 24; //edit limitnumber if you wish to load more
 
 $data = mysql_query("SELECT * FROM posts WHERE user = '$id' ORDER BY my_order DESC LIMIT " . $number . ", $limitnumber") or die(mysql_error());

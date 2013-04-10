@@ -1,7 +1,3 @@
-$(document).ready(function(){
-
-  adjustImages();
-});
 
 function adjustImages(){
 
@@ -58,6 +54,7 @@ function adjustImages(){
 		
     });
 
+    
 
 		
 }
