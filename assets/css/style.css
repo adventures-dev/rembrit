@@ -220,7 +220,7 @@ img{
 /* OVERLAY */
 
 .overlay{
-    background:transparent url("../img/overlay.png") repeat top left;
+    background:transparent url("../img/overlay.png") repeat;
     position:fixed;
     top:0px;
     bottom:0px;

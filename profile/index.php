@@ -69,16 +69,7 @@
 			<div class="span9">
 		
 					<div class="feed" id='feed'>	
-					<div class="row-fluid">
-						<div class="span4">
-							<div style="width:100%;height:150px;float:left; background:whitesmoke;"></div>
 
-						</div>
-						<div class="span8">
-										<div style="width:100%;height:462px;float:left; background:whitesmoke;"></div>
-			
-						</div>
-					</div>
 						
 					</div>
 			</div>
@@ -90,7 +81,11 @@
 									<div class="row-fluid">
 
 					<div class="span6">
-					<div class="image-container" id='profile_pic' style="width:100px;height:100px;  background:whitesmoke;"></div>
+					<div class="image-container" id='profile_pic' style="width:100px;height:100px;">
+						
+
+						
+					</div>
 					</div>
 					<div class="span6">
 						<div id='child_name'></div>
@@ -100,11 +95,7 @@
 														<div class="row-fluid">
 															<div class="span12">
 						<div id="all_kids">
-							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
-							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
-							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
-							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
-							
+		
 						</div></div>
 														</div>
 

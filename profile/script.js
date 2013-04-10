@@ -123,6 +123,12 @@
           success: function (res) {
               res = $.parseJSON(res);
               if (res == true) {
+              
+              	$("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:462px;float:left; background:whitesmoke;"></div></div></div>');
+              	$("#all_kids").html('<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>');
+              	$("#profile_pic").html('<div style="background:whitesmoke;height:100%; width:100%"></div>');
+              
+              
               	$("#all").fadeIn("fast" , function(){
                   $('#overlay').fadeIn('fast', function () {
                       $('#new_kid_box').animate({
