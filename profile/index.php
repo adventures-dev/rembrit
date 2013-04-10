@@ -52,6 +52,25 @@
 	 	</div>
 	 </div>
 </div>
+
+<div class="box" id="add_text_box">
+	 <a class="boxclose" id="text_close"></a>
+	 <h2>Add Text</h2>
+	 <div class="row-fluid">
+	 	<div class="span6">
+	 		<h4>Header</h4>
+	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+	 	</div>
+	 	<div class="span6">
+	 	
+	 	<textarea class='input-block-level'id="add_textarea" placeholder="What is your kid doing?"></textarea><button class='btn' id="add_text_button">Add Story</button></div>
+
+	 		
+	 		
+	 	</div>
+</div>
+
+
 <div class="box" id="image_box">
 	 <a class="boxclose" id="image_box_close"></a>
 	 <div class="row-fluid">

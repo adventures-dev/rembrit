@@ -2,7 +2,7 @@
   var loading = false; //this tells the program if the ajax is currently running
   var number = 0; //number used to determine location of tables in database
   var current_kid;
-
+  var current_photo;
   $(document).ready(function () {
 
 
@@ -88,7 +88,7 @@
                       }
                   });
                   }else{
-                       $("#all_kids").append("<a href='' class='child_button' data-internalid='" + result[i]["child"] + "'><div class='image-container' style='width:50px;height:50px;'><img src='../assets/img/default_pic.png'></div></a>");
+                       $("#all_kids").append("<a href='' class='child_button' data-internalid='" + res[i]["child"] + "'><div class='image-container' style='width:50px;height:50px;'><img src='../assets/img/default_pic.png'></div></a>");
 
                   
 	                  
@@ -123,7 +123,8 @@
           success: function (res) {
               res = $.parseJSON(res);
               if (res == true) {
-              
+                                  $("#child_name").empty();
+ 
               	$("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:462px;float:left; background:whitesmoke;"></div></div></div>');
               	$("#all_kids").html('<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>');
               	$("#profile_pic").html('<div style="background:whitesmoke;height:100%; width:100%"></div>');
@@ -267,6 +268,11 @@
               if (res.length == 0) { //no date left :( sad day
 
                   nodata = true;
+                  if(number == 0){
+      	        $("#profile_pic").html("<img src='../assets/img/default_pic.png'>");
+                $("#child_name").empty();
+              	$("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:462px;float:left; background:whitesmoke;"></div></div></div>');
+              	}
               }
               
               $("#all").fadeIn("fast");
@@ -442,14 +448,21 @@
                       $(".item").each(function () {
                           if ($(this).attr("data-internalid") === id) {
 
-                              $(this).fadeOut();
+                              $(this).fadeOut("fast", function(){
+	                               if(number == 0){
+	            $("#profile_pic").html("<img src='../assets/img/default_pic.png'>");
+                $("#child_name").empty();
+              	$("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:462px;float:left; background:whitesmoke;"></div></div></div>');
+                      }
+                              });
                           }
                       });
 
 
-
+                      
                       button.parent(".buttons").parent(".text-wrapper").fadeOut();
-
+                      number--;
+                     
                       if (res == true) {
                           //success action
 
@@ -509,6 +522,23 @@
           });
       });
       
+      $('#text_close').click(function () {
+          $('#add_text_box').animate({
+              'top': '-1000px'
+          }, 500, function () {
+              $('#overlay').fadeOut('fast', function(){
+	              
+	               		number = 0;
+	                  getChildData();
+	                  
+
+	              
+              });
+                     
+              
+          });
+      });
+      
 
 
   });
@@ -554,10 +584,10 @@
                   current_kid = res;
                   $('#new_kid_box').animate({
                       'top': '-1000px'
-                  }, 500, function () {
+                  }, 350, function () {
                       $('#new_photo_box').animate({
                           'top': '160px'
-                      }, 500);
+                      }, 350);
                   });
 
 
@@ -568,3 +598,51 @@
 
       }
   });
+ $("#add_text_button").click(function(){
+	 var text = $("#add_textarea").val();
+	 	 	console.log(current_photo);
+
+	 	var data = {
+              id: current_photo,
+              text: text
+
+          };
+          $.ajax({
+              type: "POST",
+              url: "update-text.php",
+              data: data,
+              success: function (res) {
+
+	         $('#add_text_box').animate({
+              'top': '-1000px'
+          }, 500, function () {
+               
+              $('#overlay').fadeOut('fast', function(){
+	              
+	      
+	                    number = 0;
+	               		getChildData();
+
+	              
+              });
+                     
+              
+          });
+
+
+              }
+          });
+
+	 
+	 
+	  
+  });
+  
+  
+  
+  
+  
+  
+    
+  
+ 

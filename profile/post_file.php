@@ -82,7 +82,7 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 						
 						mysql_query("UPDATE children SET image = '$image_id', date_updated = '$datetime' WHERE id = '$child'")or die(mysql_error());
 						
-						echo $child;
+						echo $image_id;
 						
 					}
 					else

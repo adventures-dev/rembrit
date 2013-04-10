@@ -18,13 +18,16 @@ $(function () {
 
             $(".progressHolder").remove();
             
-            $('#new_photo_box').animate({'top':'-1000px'},500,function(){
-           			 $('#overlay').fadeOut('fast');
+            $('#new_photo_box').animate({'top':'-1000px'},350,function(){
            			 
-	                  number = 0;
-	                  console.log(response);
-	                  current_kid = response;	
-	                  getChildData();
+	                       current_photo = response;
+                  $('#new_photo_box').animate({
+                      'top': '-1000px'
+                  }, 350, function () {
+                      $('#add_text_box').animate({
+                          'top': '160px'
+                      }, 350);
+                  });
 	                  
 	                  
 	                  $("#new_photo_dropbox").children(".preview").remove();
