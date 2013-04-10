@@ -87,7 +87,9 @@
 				</div>
 			
 				<button class="btn btn-success btn-large input-block-level" id ="new_kid_button">New Kid</button>
-				
+				<hr>
+				<button class="btn btn-danger btn-large input-block-level" id ="delete_kid_button">Delete Kid</button>
+
 			</div>
 
 		</div>

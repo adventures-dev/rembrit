@@ -349,6 +349,32 @@
 
 
       });
+      
+       $("#delete_kid_button").unbind("click");
+     
+      $('#delete_kid_button').click(function (event) {
+          if (confirm("Are you sure you want to delete this child?")) {
+
+              var data = {
+                  child: current_kid,
+              };
+              $.ajax({
+                  type: "POST",
+                  url: "delete_kid.php",
+                  data: data,
+                  success: function (res) {
+                    	current_kid = null;
+                    	number = 0;
+                    	getChildData();
+
+                  }
+              });
+          } else {
+              return false;
+          }
+         });
+
+      
 
 
       $(".delete_button").unbind("click");
