@@ -5,7 +5,6 @@
 
   $(document).ready(function () {
 
-      $("#feed").append('<div class="center spinner"><i class="icon-spinner icon-spin icon-2x"></i></div>');
 
       getChildData();
 
@@ -40,6 +39,7 @@
   }
 
   function getAllKids() {
+      
       $("#all_kids").empty();
       var data = {
           child: current_kid
@@ -55,6 +55,9 @@
 
 
                   var profile_image = res[i]['image'];
+                  
+                  if(profile_image !=  0){
+                  
                   var image_data = {
                       image_id: profile_image
                   };
@@ -84,6 +87,12 @@
 
                       }
                   });
+                  }else{
+                       $("#all_kids").append("<a href='' class='child_button' data-internalid='" + result[i]["child"] + "'><div class='image-container' style='width:50px;height:50px;'><img src='../assets/img/default_pic.png'></div></a>");
+
+                  
+	                  
+                  }
 
 
 
@@ -101,6 +110,9 @@
 
 
   function getChildData() {
+  $("#all").fadeOut("fast", function(){
+	  
+ 
       var data = {
           child: current_kid
       };
@@ -110,16 +122,18 @@
           data: data,
           success: function (res) {
               res = $.parseJSON(res);
-              if (res === "false") {
+              if (res == true) {
+              	$("#all").fadeIn("fast" , function(){
                   $('#overlay').fadeIn('fast', function () {
                       $('#new_kid_box').animate({
                           'top': '160px'
                       }, 500);
                   });
+                  });
 
               } else {
-              
-                                $("#feed").empty();
+              	
+                  $("#feed").empty();
 
                   for (var i = 0; i < res.length; i++) {
 
@@ -128,6 +142,9 @@
 
 
                       var profile_image = res[i]['image'];
+                      
+                      
+                        if(profile_image !=  0){
 
                       var image_data = {
                           image_id: profile_image
@@ -158,12 +175,15 @@
                           }
                       });
 
-
+                      }else{
+	                     $("#profile_pic").html("<img src='../assets/img/default_pic.png'>");
+ 
+                      }
 
                       $("#child_name").html("<h4>" + res[i]['firstname'] + " " + res[i]["lastname"] + "</h4>");
                       nodata = false;
                       getData();
-
+                      
                   }
 
 
@@ -171,7 +191,7 @@
 
           }
       });
-
+ });
   }
 
 
@@ -199,9 +219,9 @@
 
                   var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">' +
                       '<div class="preview">' +
-                      '<div class="image-container" style="width:462px; height:462px;">' +
+                      '<a href="" class="image_button" data-image="' + res[i]["location"] + '"><div class="image-container" style="width:462px; height:462px;">' +
                       '<img class="image" data-internalid="' + res[i]["id"] + '" src = "' + res[i]['location'] + '">' +
-                      '</div>' +
+                      '</div></a>' +
                       '</div>' +
                       '</div>';
 
@@ -242,7 +262,8 @@
 
                   nodata = true;
               }
-
+              
+              $("#all").fadeIn("fast");
 
               loading = false;
           }
@@ -252,6 +273,24 @@
 
 
   function triggerStuff() {
+  
+  	  $(".image_button").unbind("click");
+
+      $(".image_button").click(function (event) {
+          event.preventDefault();
+          var location = $(this).attr("data-image");
+          $("#display_image").html("<img src='"+location+"'>");
+              $('#overlay').fadeIn('fast', function () {
+              $('#image_box').animate({
+                  'top': '160px'
+              }, 500);
+          });
+
+ 
+
+      });
+  
+  
       $(".child_button").unbind("click");
 
       $(".child_button").click(function (event) {
@@ -260,8 +299,6 @@
           var id = $(this).attr("data-internalid");
           $(".child_button").each(function () {
               if ($(this).attr("data-internalid") === id) {
-                  $("#feed").prepend('<div class="center spinner"><i class="icon-spinner icon-spin icon-2x"></i></div>');
-
                   number = 0;
                   current_kid = id;
                   getChildData();
@@ -387,6 +424,7 @@
 
               var data = {
                   id: id,
+                  child: current_kid
               };
               $.ajax({
                   type: "POST",
@@ -457,6 +495,13 @@
               $('#overlay').fadeOut('fast');
           });
       });
+       $('#image_box_close').click(function () {
+          $('#image_box').animate({
+              'top': '-1000px'
+          }, 500, function () {
+              $('#overlay').fadeOut('fast');
+          });
+      });
       
 
 
@@ -481,10 +526,12 @@
 
           var firstname = $("#firstname").val();
           var lastname = $("#lastname").val();
+          var birthday = $("#birthday").val();
 
           var data = {
               firstname: firstname,
-              lastname: lastname
+              lastname: lastname,
+              birthday: birthday
           };
           $.ajax({
               type: "POST",

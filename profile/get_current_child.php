@@ -33,7 +33,7 @@ if($num_rows != 0){
 	echo $js_array;
 	
 }else{
-	echo "false";
+	echo true;
 }
 
 ?>

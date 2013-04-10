@@ -21,7 +21,6 @@ $(function () {
             $('#new_photo_box').animate({'top':'-1000px'},500,function(){
            			 $('#overlay').fadeOut('fast');
            			 
-	           		 $("#feed").prepend('<div class="center spinner"><i class="icon-spinner icon-spin icon-2x"></i></div>');
 	                  number = 0;
 	                  console.log(response);
 	                  current_kid = response;	

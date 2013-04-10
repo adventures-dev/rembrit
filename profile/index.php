@@ -8,7 +8,7 @@
 <div id="mainpage">
 <?php include("../snippets/nav.php");?>
 
-
+<div id="all" class="hide">
 <div class="overlay" id="overlay" style="display:none;"></div>
  
 <div class="box" id="new_kid_box">
@@ -52,7 +52,14 @@
 	 	</div>
 	 </div>
 </div>
-
+<div class="box" id="image_box">
+	 <a class="boxclose" id="image_box_close"></a>
+	 <div class="row-fluid">
+	 	 	<div id="display_image" class="center" style="width:100%;">
+	 	 	
+	 	 	</div>
+	 </div>
+</div>
 
 <!--body goes here-->
 <div class="white-bg">
@@ -62,17 +69,28 @@
 			<div class="span9">
 		
 					<div class="feed" id='feed'>	
+					<div class="row-fluid">
+						<div class="span4">
+							<div style="width:100%;height:150px;float:left; background:whitesmoke;"></div>
+
+						</div>
+						<div class="span8">
+										<div style="width:100%;height:462px;float:left; background:whitesmoke;"></div>
+			
+						</div>
+					</div>
 						
 					</div>
 			</div>
 			<div class="span3">
+			<div id='info' >
 					<button class="btn btn-primary btn-large input-block-level" id ="new_photo_button">New Photo</button>			
 					<hr>
-				<div id='info'>
+				
 									<div class="row-fluid">
 
 					<div class="span6">
-					<div class="image-container" id='profile_pic' style="width:100px;height:100px;"></div>
+					<div class="image-container" id='profile_pic' style="width:100px;height:100px;  background:whitesmoke;"></div>
 					</div>
 					<div class="span6">
 						<div id='child_name'></div>
@@ -81,15 +99,21 @@
 					</div>
 														<div class="row-fluid">
 															<div class="span12">
-						<div id="all_kids"></div></div>
+						<div id="all_kids">
+							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
+							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
+							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
+							<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>
+							
+						</div></div>
 														</div>
 
-				</div>
+			
 			
 				<button class="btn btn-success btn-large input-block-level" id ="new_kid_button">New Kid</button>
 				<hr>
 				<button class="btn btn-danger btn-large input-block-level" id ="delete_kid_button">Delete Kid</button>
-
+	</div>
 			</div>
 
 		</div>
@@ -98,7 +122,7 @@
 	</div>
 
 </div>
-			
+</div>
 				
 
 <!-- end of body -->
