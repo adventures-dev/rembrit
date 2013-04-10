@@ -58,16 +58,18 @@
 
                       var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">'+
                           '<div class="preview">' +
-                          '<span class="imageHolder">' +
+                          '<div class="image-container">' +
                           '<img class="image" data-internalid="' + res[i]["id"] + '" src = "' + res[i]['location'] + '">' +
-                          '</span>' +
+                          '</div>' +
                           '</div>'+
                       '</div>';
 
                     var now = new Date(res[i]["datetime"]); 
-					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
-						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
-    	          	var	date = prettyDate(then);
+					var then = now.toISOString(); 
+    	          	//var	date = prettyDate(then);
+    	          	
+    	          	var date = now.toDateString();
+    	          	
                     var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
                     var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p>"+res[i]["text"]+"</p></div>";
                     var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>"+res[i]["text"]+"</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
@@ -83,6 +85,8 @@
                   number++;
               }
               		triggerStuff();
+              		
+              		
 
 
               if (res.length == 0) { //no date left :( sad day
@@ -99,6 +103,10 @@
   
   
   function triggerStuff() {
+
+                $(".image-container img").load(function () {
+               		 adjustImages();
+               	});
   
   	 	$(".side_textbutton").unbind("click");
       $('.side_textbutton').click(function (event) {

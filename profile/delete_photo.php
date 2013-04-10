@@ -2,7 +2,7 @@
 	include("../scripts/dbconnect.php");
 	$id = $_POST['id'];
 	
-	$data = mysql_query("SELECT location, location_small, location_thumb FROM posts WHERE id = '$id'")or die(mysql_error());
+	$data = mysql_query("SELECT location, location_small, location_thumb FROM profile WHERE id = '$id'")or die(mysql_error());
 	
 	while($info = mysql_fetch_array($data)){
 		

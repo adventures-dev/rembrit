@@ -11,16 +11,16 @@ $(function () {
         url: 'post_file.php',
 
         uploadFinished: function (i, file, response) {
-        
+
             $(".progressHolder").remove();
             console.log(response);
-               
-                $("#dropbox").children(".preview").remove();
 
-    
-                 displayImage(file, $("#feed"), response);
+            $("#dropbox").children(".preview").remove();
 
-        message.show();
+
+            displayImage(file, $("#feed"), response);
+
+            message.show();
 
         },
 
@@ -52,7 +52,7 @@ $(function () {
         },
 
         uploadStarted: function (i, file, len) {
-          var image = createImage(file);
+            var image = createImage(file);
         },
 
         progressUpdated: function (i, file, progress) {
@@ -63,10 +63,10 @@ $(function () {
     });
 
     var template = '<div class="preview">' +
-        '<span class="imageHolder">' +
+        '<div class="image-container">' +
         '<img />' +
         '<span class="uploaded"></span>' +
-        '</span>' +
+        '</div>' +
         '<div class="progressHolder">' +
         '<div class="progress"></div>' +
         '</div>' +
@@ -74,15 +74,17 @@ $(function () {
 
 
     function displayImage(file, feed, id) {
-    
 
-        var imageTemplate = '<div class="image-wrapper" data-internalid="'+id+'">'+
-            '<span class="imageHolder">' +
+
+        var imageTemplate = '<div class="image-wrapper" data-internalid="' + id + '">' +
+            '<div class="image-container">' +
             '<img />' +
-            '</span>' +
-        '</div>';
+            '</div>' +
+            '</div>';
 
-
+               $(".image-container img").load(function () {
+               		 adjustImages();
+               	});   
 
 
         var preview = $(imageTemplate),
@@ -94,45 +96,45 @@ $(function () {
             // e.target.result holds the DataURL which
             // can be used as a source of the image:
             image.attr('src', e.target.result);
-            
+
         };
-        
-        
-        
+
+
+
         // Reading the file as a DataURL. When finished,
         // this will trigger the onload function above:
         reader.readAsDataURL(file);
 
-        
+
         // Associating a preview container
         // with the file, using jQuery's $.data():
 
         $.data(file, image);
-        
-           			var now = new Date(); 
-					var then = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDay(); 
-						      then += 'T'+now.getHours()+':'+now.getMinutes()+':'+now.getSeconds()+"Z"; 
-    	          	var	date = prettyDate(then);
-                     var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + id + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + id + '"><i class="icon-minus-sign"></i> delete</a></div>';
 
-                        var text = "<div class='side_text' data-internalid='" + id + "'><p></p></div>";
-                    var textbox = "<div class='side_textbox hide' data-internalid='" + id + "'><textarea class='input-block-level side_textarea' data-internalid='" + id + "'></textarea><button class='btn side_textbutton' data-internalid='" + id + "'>Edit</button></div>";
+        var now = new Date();
+        var then = now.toISOString();
+        //var date = prettyDate(then);
+        var date = now.toDateString();
+        var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + id + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + id + '"><i class="icon-minus-sign"></i> delete</a></div>';
 
-                   var sidehtml = '<div class="text-wrapper" data-internalid="' + id + '">'+
-                      			'<p>posted '+date+'</p>'+text+textbox+buttons+
-                      
-                   				'</div><hr>';
+        var text = "<div class='side_text' data-internalid='" + id + "'><p></p></div>";
+        var textbox = "<div class='side_textbox hide' data-internalid='" + id + "'><textarea class='input-block-level side_textarea' data-internalid='" + id + "'></textarea><button class='btn side_textbutton' data-internalid='" + id + "'>Edit</button></div>";
 
-                  $("#feed").prepend("<div class='row-fluid item' data-internalid='"+id+"'><div class='span4'>"+sidehtml+"</div><div class='span8 main_image' data-internalid='" + id+ "'></div></div>");
+        var sidehtml = '<div class="text-wrapper" data-internalid="' + id + '">' +
+            '<p>posted ' + date + '</p>' + text + textbox + buttons +
 
-                  $(".main_image").each(function(){
-	                  if($(this).attr("data-internalid") === id.toString()){
-		                  $(this).append(preview);
-	                  }
-                  })
-                   				
-                   triggerStuff();
-        
+        '</div><hr>';
+
+        $("#feed").prepend("<div class='row-fluid item' data-internalid='" + id + "'><div class='span4'>" + sidehtml + "</div><div class='span8 main_image' data-internalid='" + id + "'></div></div>");
+
+        $(".main_image").each(function () {
+            if ($(this).attr("data-internalid") === id.toString()) {
+                $(this).append(preview);
+            }
+        })
+
+        triggerStuff();
+
     }
 
     function createImage(file) {
@@ -143,8 +145,10 @@ $(function () {
 
         var reader = new FileReader();
 
-        image.width = 100;
-        image.height = 100;
+
+      $(".image-container img").load(function () {
+               		 adjustImages();
+               	});
 
         reader.onload = function (e) {
 
