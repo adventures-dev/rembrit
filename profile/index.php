@@ -139,12 +139,14 @@
 </div><!--main page-->
 <?php include("../snippets/javascripts.php");?>
 <!--other scripts here-->
+<script src="../assets/js/image-container.js"></script>	
+
+<script src="jquery.filedrop.js"></script>
 <script src="script.js"></script>
-<script src="jquery.filedrop.js"></script>	
+
 <script src="upload.js"></script>
 
-<script src="../assets/js/image-container.js"></script>	
-  
+
 
 
 <script>

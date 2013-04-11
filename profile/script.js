@@ -19,6 +19,7 @@
   });
 
 
+
   function prettyDate(time) {
 
       var date = new Date((time || "").replace(/-/g, "/").replace(/[TZ]/g, " ")),
@@ -494,7 +495,7 @@
       });
       $('#new_kid_close').click(function () {
           $('#new_kid_box').animate({
-              'top': '-1000px'
+              'top': '-500px'
           }, 500, function () {
               $('#overlay').fadeOut('fast');
           });
@@ -509,14 +510,14 @@
       });
       $('#new_photo_close').click(function () {
           $('#new_photo_box').animate({
-              'top': '-1000px'
+              'top': '-500px'
           }, 500, function () {
               $('#overlay').fadeOut('fast');
           });
       });
        $('#image_box_close').click(function () {
           $('#image_box').animate({
-              'top': '-1000px'
+              'top': '-500px'
           }, 500, function () {
               $('#overlay').fadeOut('fast');
           });
@@ -524,7 +525,7 @@
       
       $('#text_close').click(function () {
           $('#add_text_box').animate({
-              'top': '-1000px'
+              'top': '-500px'
           }, 500, function () {
               $('#overlay').fadeOut('fast', function(){
 	              
@@ -583,11 +584,11 @@
 
                   current_kid = res;
                   $('#new_kid_box').animate({
-                      'top': '-1000px'
-                  }, 350, function () {
+                      'top': '-500px'
+                  }, 500, function () {
                       $('#new_photo_box').animate({
                           'top': '160px'
-                      }, 350);
+                      }, 500);
                   });
 
 
@@ -614,7 +615,7 @@
               success: function (res) {
 
 	         $('#add_text_box').animate({
-              'top': '-1000px'
+              'top': '-500px'
           }, 500, function () {
                
               $('#overlay').fadeOut('fast', function(){

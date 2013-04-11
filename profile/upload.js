@@ -18,15 +18,15 @@ $(function () {
 
             $(".progressHolder").remove();
             
-            $('#new_photo_box').animate({'top':'-1000px'},350,function(){
+            $('#new_photo_box').animate({'top':'-1000px'},500,function(){
            			 
 	                       current_photo = response;
                   $('#new_photo_box').animate({
                       'top': '-1000px'
-                  }, 350, function () {
+                  }, 500, function () {
                       $('#add_text_box').animate({
                           'top': '160px'
-                      }, 350);
+                      }, 500);
                   });
 	                  
 	                  
