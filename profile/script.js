@@ -735,9 +735,6 @@
               data: data,
               success: function (res) {
 
-                  $("#firstname").val("");
-                  $("#lastname").val("");
-                  $("#birthday").val("");
 
                   $("#new_kid_form div").remove(".spinner");
 
@@ -745,6 +742,12 @@
                   $('#new_kid_box').animate({
                       'top': '-1000px'
                   }, 500, function () {
+                  
+                  	
+                  $("#firstname").val("");
+                  $("#lastname").val("");
+                  $("#birthday").val("");
+                  
                       $('#new_photo_box').animate({
                           'top': '160px'
                       }, 500);

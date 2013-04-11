@@ -116,9 +116,12 @@
 						
 					</div>
 			</div>
-			<div class="span3">
-			<div id='info' >
-					<button class="btn btn-primary btn-large input-block-level" id ="new_photo_button">New Photo</button>			
+			<div class="span3" id='info' >
+					<button class="btn btn-primary btn-large input-block-level" id ="new_photo_button">New Photo</button>
+									<hr>
+
+				<button class="btn btn-success btn-large input-block-level" id ="new_kid_button">New Kid</button>
+								
 					<hr>
 				
 									<div class="row-fluid">
@@ -141,6 +144,15 @@
 						<div id="all_kids">
 		
 						</div>
+			
+						
+						
+						</div>
+														</div>
+														
+																								<div class="row-fluid">
+															<div class="span12">
+		
 							<div id="all_milestones">
 		
 						</div>
@@ -151,13 +163,10 @@
 
 			
 			
-				<button class="btn btn-success btn-large input-block-level" id ="new_kid_button">New Kid</button>
-				<hr>
 				<button class="btn btn-warning btn-large input-block-level" id ="edit_kid_button">Edit Kid</button>		
 				<hr>		
 				
 	</div>
-			</div>
 
 		</div>
 	
