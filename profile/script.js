@@ -27,9 +27,7 @@
         data: data,
         success: function (res) {
             res = $.parseJSON(res);
-            
             milestones = "<option value='0'>No Milestone</option>";
-            
             for (var i = 0; i < res.length; i++) {
                 //use this section to display all the data, use some .append() or something
                 milestones = milestones + "<option value='" + res[i]['id'] + "'>" + res[i]["name"] + "</option>";
@@ -39,12 +37,13 @@
 
         }
     });
-    
+  }
   
-    
+  function getTimeLine(){
 	  
 	  
   }
+  
   
   function getCurrentMilestones(){
   $("#all_milestones").fadeOut("fast", function(){
@@ -323,7 +322,6 @@
 
                   '</div><hr>';
 
-	     $( ".edit_date_change" ).datepicker();
 
 
                   $("#feed").append("<div class='row-fluid item' data-internalid='" + res[i]["id"] + "'><div class='span4'>" + sidehtml + "</div><div class='span8'>" + html + "</div></div>");
@@ -345,6 +343,7 @@
               });
 
               triggerStuff();
+	     $( ".edit_date_change" ).datepicker();
 
               if (res.length == 0) { //no date left :( sad day
 
