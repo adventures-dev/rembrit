@@ -220,7 +220,7 @@ img{
 /* OVERLAY */
 
 .overlay{
-    background:transparent url("../img/overlay.png") repeat;
+    background:transparent url("../img/overlay.png");
     position:fixed;
     top:0px;
     bottom:0px;
@@ -230,7 +230,7 @@ img{
 }
 
 .box{
-    position:fixed;
+    position:absolute;
     top:-1000px;
     left:25%;
     right:25%;
@@ -267,6 +267,9 @@ a.boxclose{
     -webkit-border-top-right-radius: 20px;
     -khtml-border-top-left-radius: 20px;
     -khtml-border-top-right-radius: 20px;
+}
+#all_milestones{
+	padding: 20px 0px;
 }
 
 

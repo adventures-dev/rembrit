@@ -19,7 +19,7 @@
         <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/ui-lightness/jquery-ui-1.10.1.custom.min.css " rel="stylesheet" type="text/css">
+        <link href="assets/css/smoothness/jquery-ui-1.10.2.custom.min.css " rel="stylesheet" type="text/css">
         <link href="assets/css/davestrap.css" rel="stylesheet" type="text/css">
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>

@@ -7,7 +7,7 @@
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$birthday = $_POST['birthday'];
-	
+	$birthday = date('Y-m-d', strtotime($birthday));
 	$datetime = date("Y-m-d H:i:s");
 	
 	

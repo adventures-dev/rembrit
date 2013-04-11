@@ -32,6 +32,30 @@
 	 	</div>
 	 </div>
 </div>
+ 
+<div class="box" id="edit_kid_box">
+	 <a class="boxclose" id="edit_kid_close"></a>
+	 <h2>Edit Kid</h2>
+	 <div class="row-fluid">
+	 	<div class="span6">
+	 		<h4>Header</h4>
+	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+	 						<button class="btn btn-danger btn-large input-block-level" id ="delete_kid_button">Delete Kid</button>
+
+	 	</div>
+	 	<div class="span6">
+	 		
+	 		<form action="" method="POST" id="edit_kid_form">
+	 		<div id="edit_kid_form_error"></div>
+	 			<input class="input-block-level" type="text" id="edit_firstname" name="edit_firstname" placeholder="First Name">
+	 			<input class="input-block-level" type="text" id="edit_lastname" name="edit_lastname" placeholder="Last Name">
+	 			<input class="input-block-level" type="text" id="edit_birthday" name="edit_birthday" placeholder="Birthday (mm/dd/yyyy)">
+	 			
+	 			<input class="btn btn-success" type="submit" value="Edit">
+	 		</form>
+	 	</div>
+	 </div>
+</div>
 
 
 <div class="box" id="new_photo_box">
@@ -62,9 +86,9 @@
 	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 	 	</div>
 	 	<div class="span6">
-	 	
+	 	<select id='milestone_select' class="input-block-level" name='milestone'></select>
 	 	<textarea class='input-block-level'id="add_textarea" placeholder="What is your kid doing?"></textarea><button class='btn' id="add_text_button">Add Story</button></div>
-
+	 	
 	 		
 	 		
 	 	</div>
@@ -108,6 +132,7 @@
 					</div>
 					<div class="span6">
 						<div id='child_name'></div>
+						<div id='child_birthday'></div>
 
 					</div>
 					</div>
@@ -115,14 +140,22 @@
 															<div class="span12">
 						<div id="all_kids">
 		
-						</div></div>
+						</div>
+							<div id="all_milestones">
+		
+						</div>
+						
+						
+						</div>
 														</div>
 
 			
 			
 				<button class="btn btn-success btn-large input-block-level" id ="new_kid_button">New Kid</button>
 				<hr>
-				<button class="btn btn-danger btn-large input-block-level" id ="delete_kid_button">Delete Kid</button>
+				<button class="btn btn-warning btn-large input-block-level" id ="edit_kid_button">Edit Kid</button>		
+				<hr>		
+				
 	</div>
 			</div>
 

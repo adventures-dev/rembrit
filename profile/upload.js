@@ -7,49 +7,51 @@ $(function () {
         // The name of the $_FILES entry:
         paramname: 'pic',
         maxfiles: 1,
-        maxfilesize: 10,
+        maxfilesize: 5,
         url: 'post_file.php',
-        data:{
-	      child:function(){
-		      return current_kid;
-	      }, 
+        data: {
+            child: function () {
+                return current_kid;
+            },
         },
         uploadFinished: function (i, file, response) {
 
             $(".progressHolder").remove();
-            
-            $('#new_photo_box').animate({'top':'-1000px'},500,function(){
-           			 
-	                       current_photo = response;
-                  $('#new_photo_box').animate({
-                      'top': '-1000px'
-                  }, 500, function () {
-                      $('#add_text_box').animate({
-                          'top': '160px'
-                      }, 500);
-                  });
-	                  
-	                  
-	                  $("#new_photo_dropbox").children(".preview").remove();
-	                  message.show();
-	 
+
+            $('#new_photo_box').animate({
+                'top': '-1000px'
+            }, 500, function () {
+
+                current_photo = response;
+                $('#new_photo_box').animate({
+                    'top': '-1000px'
+                }, 500, function () {
+                    $('#add_text_box').animate({
+                        'top': '160px'
+                    }, 500);
+                });
+
+
+                $("#new_photo_dropbox").children(".preview").remove();
+                message.show();
+
             });
 
         },
 
         error: function (err, file) {
             switch (err) {
-                case 'BrowserNotSupported':
-                    showMessage('Your browser does not support HTML5 file uploads!');
-                    break;
-                case 'TooManyFiles':
-                    alert('Too many files! Please select 1 at most! (configurable)');
-                    break;
-                case 'FileTooLarge':
-                    alert(file.name + ' is too large! Please upload files up to 50mb (configurable).');
-                    break;
-                default:
-                    break;
+            case 'BrowserNotSupported':
+                showMessage('Your browser does not support HTML5 file uploads!');
+                break;
+            case 'TooManyFiles':
+                alert('Too many files! Please select 1 at most!');
+                break;
+            case 'FileTooLarge':
+                alert(file.name + ' is too large! Please upload files up to 5mb.');
+                break;
+            default:
+                break;
             }
         },
 
@@ -95,9 +97,9 @@ $(function () {
         var reader = new FileReader();
 
 
-      $(".image-container img").load(function () {
-               		 adjustImages();
-               	});
+        $(".image-container img").load(function () {
+            adjustImages();
+        });
 
         reader.onload = function (e) {
 
