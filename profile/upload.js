@@ -23,6 +23,9 @@ $(function () {
             }, 500, function () {
 
                 current_photo = response;
+                var date =  new Date();
+                var date = (date.getMonth()+1) +"/"+date.getDate()+"/"+date.getFullYear();
+                $("#date_change").val(date);
                 $('#new_photo_box').animate({
                     'top': '-1000px'
                 }, 500, function () {

@@ -1,4 +1,4 @@
-<?php session_start();if(!$_SESSION['user']){header('Location: ../');}?>
+ <?php session_start();if(!$_SESSION['user']){header('Location: ../');}?>
 
 <?php include("../snippets/header.php");?>
 
@@ -87,6 +87,8 @@
 	 	</div>
 	 	<div class="span6">
 	 	<select id='milestone_select' class="input-block-level" name='milestone'></select>
+	 	<input class="input-block-level" type="text" id="date_change" name="date_change" placeholder="(mm/dd/yyyy)">
+
 	 	<textarea class='input-block-level'id="add_textarea" placeholder="What is your kid doing?"></textarea><button class='btn' id="add_text_button">Add Story</button></div>
 	 	
 	 		
@@ -109,7 +111,8 @@
 	<div class="container">
 
 		<div class="row-fluid">
-			<div class="span9">
+		<div class="span1 off-white-bg"></div>
+			<div class="span8">
 		
 					<div class="feed" id='feed'>	
 

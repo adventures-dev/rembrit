@@ -75,8 +75,8 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 							
 						}
 						$datetime = date("Y-m-d H:i:s");
-
-						mysql_query("INSERT INTO profile (user, datetime, location, location_small, location_thumb, child) VALUES ('".mysql_real_escape_string($id)."', '".mysql_real_escape_string($datetime)."','".mysql_real_escape_string("../uploads/profile/images/".$actual_image_name)."','".mysql_real_escape_string("../uploads/profile/images/small/".$actual_image_name)."','".mysql_real_escape_string("../uploads/profile/images/thumb/".$actual_image_name)."', '$child')")or die(mysql_error());
+						$date = date("Y-m-d");
+						mysql_query("INSERT INTO profile (user, datetime, location, location_small, location_thumb, child, date) VALUES ('".mysql_real_escape_string($id)."', '".mysql_real_escape_string($datetime)."','".mysql_real_escape_string("../uploads/profile/images/".$actual_image_name)."','".mysql_real_escape_string("../uploads/profile/images/small/".$actual_image_name)."','".mysql_real_escape_string("../uploads/profile/images/thumb/".$actual_image_name)."', '$child', '$date')")or die(mysql_error());
 						
 						$image_id =  mysql_insert_id();
 						

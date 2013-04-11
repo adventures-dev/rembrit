@@ -178,7 +178,7 @@
                       $("#child_name").empty();
                       $("#child_birthday").empty();
 
-                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:462px;float:left; background:whitesmoke;"></div></div></div>');
+                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:409px;float:left; background:whitesmoke;"></div></div></div>');
                       $("#all_kids").html('<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>');
                       $("#profile_pic").html('<div style="background:whitesmoke;height:100%; width:100%"></div>');
 
@@ -238,7 +238,7 @@
 
                           } else {
                               $("#profile_pic").html("<img src='../assets/img/default_pic.png'>");
-
+    
                           }
                           var date = res[i]['birthday'];
                           date = date.toString();
@@ -302,27 +302,28 @@
 
                   var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">' +
                       '<div class="preview">' +
-                      '<a href="" class="image_button" data-image="' + res[i]["location"] + '"><div class="image-container" style="width:462px; height:462px;">' +
+                      '<a href="" class="image_button" data-image="' + res[i]["location"] + '"><div class="image-container" style="width:409px; height:409px;">' +
                       '<img class="image" data-internalid="' + res[i]["id"] + '" src = "' + res[i]['location'] + '">' +
                       '</div></a>' +
                       '</div>' +
                       '</div>';
-
-                  var now = new Date(res[i]["datetime"]);
-                  var then = now.toISOString();
+                      var dateme = res[i]['date'];
+                      var dateArray = dateme.split("-")
+                  var now = new Date(dateArray[0], dateArray[1]-1, dateArray[2]);
                   //var	date = prettyDate(then);
-
+                  var formated_date = (now.getMonth()+1) +"/"+now.getDate()+"/"+now.getFullYear();
                   var date = now.toDateString();
 
                   var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
-                  var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p>" + res[i]["text"] + "</p><p>"+milestone_icon+"</p></div>";
-                  var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><select class='side_milestones input-block-level' data-internalid='" + res[i]["id"] + "'>"+milestones+"</select><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>" + res[i]["text"] + "</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
+                  var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p>" + date + "</p><p>" + res[i]["text"] + "</p><p>"+milestone_icon+"</p></div>";
+                  var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><select class='side_milestones input-block-level' data-internalid='" + res[i]["id"] + "'>"+milestones+"</select><input class='input-block-level edit_date_change' data-internalid='" + res[i]["id"] + "' type='text' name='edit_date_change' placeholder='(mm/dd/yyyy)' value='"+formated_date+"'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>" + res[i]["text"] + "</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
 
                   var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">' +
-                      '<p>posted ' + date + '</p>' + text + textbox + buttons +
+                      text + textbox + buttons +
 
                   '</div><hr>';
 
+	     $( ".edit_date_change" ).datepicker();
 
 
                   $("#feed").append("<div class='row-fluid item' data-internalid='" + res[i]["id"] + "'><div class='span4'>" + sidehtml + "</div><div class='span8'>" + html + "</div></div>");
@@ -350,10 +351,8 @@
                   nodata = true;
                   if (number == 0) {
                       $("#profile_pic").html("<img src='../assets/img/default_pic.png'>");
-                      $("#child_name").empty();
-                      $("#child_birthday").empty();
                       
-                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:462px;float:left; background:whitesmoke;"></div></div></div>');
+                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:409px;float:left; background:whitesmoke;"></div></div></div>');
                   }
               }
 
@@ -430,11 +429,16 @@
           var new_text = "";
           var new_milestone_icon;
           var new_milestone;
+          var new_date;
+          var new_date_formatted;
           $(".side_textbox").each(function () {
               if ($(this).attr("data-internalid") === id) {
                   new_text = $(this).children(".side_textarea").val();
                   new_milestone = $(this).children(".side_milestones").val();
-                  
+                     new_date = $(this).children(".edit_date_change").val();
+               
+                     new_date_formatted = new Date(new_date);
+                  new_date_formatted = new_date_formatted.toDateString();
                   
                   switch (parseInt(new_milestone))
 					{
@@ -454,7 +458,7 @@
 
           $(".side_text").each(function () {
               if ($(this).attr("data-internalid") === id) {
-                  $(this).html("<p>" + new_text + "</p><p>"+new_milestone_icon+"</p>");                  
+                  $(this).html("<p>"+new_date_formatted+"</p><p>" + new_text + "</p><p>"+new_milestone_icon+"</p>");                  
                   $(this).slideDown();
               }
           });
@@ -464,8 +468,8 @@
           var data = {
               id: id,
               text: new_text, 
-              milestone: new_milestone 
-
+              milestone: new_milestone,
+              date: new_date
           };
           $.ajax({
               type: "POST",
@@ -497,8 +501,6 @@
           event.preventDefault();
 
           var id = $(this).attr("data-internalid");
-
-
 
           $(".side_text").each(function () {
               if ($(this).attr("data-internalid") === id) {
@@ -594,7 +596,7 @@
                                       $("#child_name").empty();
                                       $("#child_birthday").empty();
 
-                                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:462px;float:left; background:whitesmoke;"></div></div></div>');
+                                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:409px;float:left; background:whitesmoke;"></div></div></div>');
                                   }
                               });
                           }
@@ -699,6 +701,7 @@
      $(function() {
 	     $( "#birthday" ).datepicker();
 	     $( "#edit_birthday" ).datepicker();
+	     $( "#date_change" ).datepicker();
 
     });
 
@@ -816,13 +819,15 @@
   $("#add_text_button").click(function () {
       var text = $("#add_textarea").val();
             var milestone = $("#milestone_select").val();
+            var date = $("#date_change").val();
 
       console.log(current_photo);
 
       var data = {
           id: current_photo,
           text: text,
-          milestone: milestone
+          milestone: milestone,
+          date: date
           
 
       };
@@ -843,7 +848,8 @@
                       getChildData();
                       $("#add_textarea").val("");
                       $("#milestone_select").val("");
-                      
+                         $("#date_change").val("");
+                   
                       
 
                   });

@@ -9,7 +9,7 @@
 	$datetime = date("Y-m-d H:i:s");
 	
 	
-	mysql_query("UPDATE children SET firstname = '".mysql_real_escape_string($firstname)."', lastname = '".mysql_real_escape_string($lastname)."', birthday = '".mysql_real_escape_string($birthday)."' WHERE id = '$child'")or die(mysql_error());
+	mysql_query("UPDATE children SET firstname = '".mysql_real_escape_string($firstname)."', lastname = '".mysql_real_escape_string($lastname)."', birthday = '".mysql_real_escape_string($birthday)."' date_update = '$datetime' WHERE id = '$child'")or die(mysql_error());
 
 
 	echo true;
