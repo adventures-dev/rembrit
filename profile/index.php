@@ -111,7 +111,7 @@
 	<div class="container">
 
 		<div class="row-fluid">
-		<div class="span1 off-white-bg"></div>
+		<div class="span1 off-white-bg" id='timeline'></div>
 			<div class="span8">
 		
 					<div class="feed" id='feed'>	
