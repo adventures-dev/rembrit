@@ -4,6 +4,7 @@
   var current_kid;
   var current_photo;
   var milestones;
+  var selected_year;
   $(document).ready(function () {
 	  getMilestones();
       getChildData();
@@ -41,6 +42,47 @@
   
   function getTimeLine(){
 	  
+	  var data = {
+		  child: current_kid
+	  };
+	  $.ajax({
+	       type: "POST",
+	       url: "timeline.php",
+	       data: data,
+	       success: function (res) {
+	            var current_date = new Date();
+	            
+	            var current_year = current_date.getFullYear();
+
+	            var old_date = new Date(res);
+	            var old_year = old_date.getFullYear();
+
+	            if(selected_year == null){
+		            selected_year = current_year;
+	            }
+	            $("#timeline").empty();
+	            for(var i = current_year; i>=old_year; i--){
+		            if(i == selected_year){
+			            $("#timeline").append("<a href='' class='year_button' data-year='"+i+"'><li class='active'>"+i+"</li></a>");
+
+		            }else{
+			            $("#timeline").append("<a href='' class='year_button' data-year='"+i+"'><li>"+i+"</li></a>");
+
+		            }
+		            
+	            }
+	            
+	            triggerStuff();
+	            	              $(".image-container").each(function () {
+	                  $(this).load(function () {
+	                      adjustImages();
+	                  });
+	
+	              });
+
+	            
+	       }
+	  });
 	  
   }
   
@@ -165,7 +207,7 @@
 
 
           var data = {
-              child: current_kid
+              child: current_kid,
           };
           $.ajax({
               type: "POST",
@@ -198,6 +240,7 @@
 
                           current_kid = res[i]['id'];
                           
+                          getTimeLine();
                           getAllKids();
                           getCurrentMilestones();
 
@@ -269,7 +312,9 @@
       var data = {
           ///include all post data in this array
           number: number,
-          child: current_kid
+          child: current_kid,
+           year: selected_year
+
       };
 
       //insert loading icon here
@@ -335,12 +380,12 @@
                   number++;
               }
 
-              $(".image-container").each(function () {
-                  $(this).load(function () {
-                      adjustImages();
-                  });
-
-              });
+	              $(".image-container").each(function () {
+	                  $(this).load(function () {
+	                      adjustImages();
+	                  });
+	
+	              });
 
               triggerStuff();
 	     $( ".edit_date_change" ).datepicker();
@@ -365,6 +410,19 @@
 
 
   function triggerStuff() {
+  
+  	 	 $(".year_button").unbind("click");
+
+      $(".year_button").click(function (event) {
+          event.preventDefault();
+          selected_year = $(this).attr("data-year");
+
+          
+          number = 0;
+          getChildData();
+
+      });
+  
   
   	 $(".milestone_button").unbind("click");
 
