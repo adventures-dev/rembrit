@@ -72,7 +72,7 @@
 	            for(var i = current_year; i>=old_year; i--){
 	            
 	            	  var months = "<div class='months hide'><a href='' class='month_button' data-month='11' data-year='"+i+"'><li>December</li></a>"+
-	            	  	            		"<a href='' class='month_button' data-month='11' data-year='"+i+"'><li>November</li></a>"+
+	            	  	"<a href='' class='month_button' data-month='11' data-year='"+i+"'><li>November</li></a>"+
 	            		"<a href='' class='month_button' data-month='10' data-year='"+i+"'><li>October</li></a>"+
 	            		"<a href='' class='month_button' data-month='9' data-year='"+i+"'><li>September</li></a>"+
 	            		"<a href='' class='month_button' data-month='8' data-year='"+i+"'><li>August</li></a>"+
@@ -111,9 +111,7 @@
   
   function getCurrentMilestones(){
   $("#all_milestones").fadeOut("fast", function(){
-	  
 
-  
 	  $("#all_milestones").empty();
 	  	var data = {
 		  	child: current_kid
@@ -241,9 +239,9 @@
                       $("#child_name").empty();
                       $("#child_birthday").empty();
 
-                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:409px;float:left; background:whitesmoke;"></div></div></div>');
-                      $("#all_kids").html('<div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:whitesmoke;"></div>');
-                      $("#profile_pic").html('<div style="background:whitesmoke;height:100%; width:100%"></div>');
+                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:white;"></div></div><div class="span8"><div style="width:100%;height:362px;float:left; background:white;"></div></div></div>');
+                      $("#all_kids").html('<div style="width:50px;height:50px;float:left; margin-right:5px;  background:white;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:white;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:white;"></div><div style="width:50px;height:50px;float:left; margin-right:5px;  background:white;"></div>');
+                      $("#profile_pic").html('<div style="background:white;height:100%; width:100%"></div>');
 
 
                       $("#all").fadeIn("fast", function () {
@@ -369,7 +367,7 @@
 
                   var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">' +
                       '<div class="preview">' +
-                      '<a href="" class="image_button" data-image="' + res[i]["location"] + '"><div class="image-container" style="width:409px; height:409px;">' +
+                      '<a href="" class="image_button" data-image="' + res[i]["location"] + '"><div class="image-container" style="width:362px; height:362px;">' +
                       '<img class="image" data-internalid="' + res[i]["id"] + '" src = "' + res[i]['location'] + '">' +
                       '</div></a>' +
                       '</div>' +
@@ -382,13 +380,13 @@
                   var date = now.toDateString();
 
                   var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
-                  var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p>" + date + "</p><p>" + res[i]["text"] + "</p><p>"+milestone_icon+"</p></div>";
+                  var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p><i class='icon-time'></i> " + date + "</p><p>" + res[i]["text"] + "</p><p>"+milestone_icon+"</p></div>";
                   var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><select class='side_milestones input-block-level' data-internalid='" + res[i]["id"] + "'>"+milestones+"</select><input class='input-block-level edit_date_change' data-internalid='" + res[i]["id"] + "' type='text' name='edit_date_change' placeholder='(mm/dd/yyyy)' value='"+formated_date+"'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>" + res[i]["text"] + "</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
 
                   var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">' +
                       text + textbox + buttons +
 
-                  '</div><hr>';
+                  '</div>';
 
 
 
@@ -400,7 +398,9 @@
 	                  }
                   })
                   
-                  number++;
+                  	number++;
+   
+                
               }
 
 	              $(".image-container").each(function () {
@@ -419,7 +419,7 @@
                   if (number == 0) {
                       $("#profile_pic").html("<img src='../assets/img/default_pic.png'>");
                       
-                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:409px;float:left; background:whitesmoke;"></div></div></div>');
+                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:white;"></div></div><div class="span8"><div style="width:100%;height:362px;float:left; background:white;"></div></div></div>');
                   }
               }
 
@@ -433,7 +433,12 @@
 
 
   function triggerStuff() {
-  
+  			var new_number = number *(362+5);        
+  			  $("#line").attr("y2", new_number);
+          $("#bottom_circle").attr("cy", new_number);
+          $("#myline").css("height", new_number+20);
+   		console.log(new_number);                   
+                      
   	$(".year_button").unbind("click");
 
       $(".year_button").click(function(event) {
@@ -694,7 +699,7 @@
                                       $("#child_name").empty();
                                       $("#child_birthday").empty();
 
-                                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:whitesmoke;"></div></div><div class="span8"><div style="width:100%;height:409px;float:left; background:whitesmoke;"></div></div></div>');
+                                      $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:white;"></div></div><div class="span8"><div style="width:100%;height:362px;float:left; background:white;"></div></div></div>');
                                   }
                               });
                           }

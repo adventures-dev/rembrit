@@ -112,7 +112,19 @@
 
 		<div class="row-fluid">
 		<div class="span1" id='timeline'></div>
-			<div class="span8">
+		<div class="span1" id='myline'>
+			
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<circle id='top_circle' cx='30' cy='18' r='7'stroke-width='2' fill='#09e2e5' />
+			
+				<line id='line' x1="30" y1="20" x2="30" y2="362"/>
+				<circle id='bottom_circle' cx='30' cy='362' r='7'stroke-width='2' fill='#09e2e5' />
+
+  			</svg>
+			
+		</div>
+		
+			<div class="span7">
 		
 					<div class="feed" id='feed'>	
 

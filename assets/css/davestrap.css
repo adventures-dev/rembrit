@@ -1,9 +1,10 @@
 body {
-    font-weight: 100;
+    font-weight: 200;
     font-size: medium;
-    font-family: 'Actor', sans-serif;
+    font-family: 'Myriad Pro', sans-serif;
     line-height: 1.7em;
-    
+    background: url("../img/background.jpg");
+    color: rgba(107,107,107,1);
 }
 
 html, body {height: 100%;}
@@ -17,11 +18,12 @@ textarea{
 #main {overflow:auto;padding-bottom: 50px;}
  
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Maven', sans-serif;
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: 300;
 }
 header{
 	padding: 10px;
-	background: black;
+	background: #09e2e5;
 }
 header a, header strong{
 	color: white;
@@ -30,6 +32,10 @@ header a:hover{
 	color: whitesmoke;
 	cursor: hand;
 	cursor: pointer;
+}
+header h4{
+	font-family: 'Noteworthy';
+	font-size: 18pt;
 }
 a:hover{
 	text-decoration: none;
@@ -59,7 +65,7 @@ footer{
 	margin-top: -50px; /* negative value of footer height */
 	height: 50px;
 	clear:both;
-	background: black;
+	background: transparent;
 	padding: 10px;	
 	color: white;
 }
@@ -69,7 +75,7 @@ footer{
 }
 
 .white-bg{
-	background: white;
+	background: transparent;
 	padding: 20px;
 }
 .off-white-bg{

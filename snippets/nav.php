@@ -5,7 +5,7 @@
                 <div id="logo" class="pull-left">
                 	<a href="javascript:void(0)" id="invokeMenu-left" class="pull-left"><i class="icon-reorder"></i></a>
                     <a href="../" class="pull-left">
-                       <img id="logo-image" src="../assets/img/logo.png"> <span>davestrap</span>
+                       <h4>Rembr.it</h4>
 
                     </a>
                    <!--uncomment for a right sliding menu <a href="javascript:void(0)" id="invokeMenu-right" class="pull-right"><i class="icon-reorder"></i></a>-->
@@ -38,7 +38,7 @@
                     <ul id="nav" class="pull-right">
                         <li>
                         		<li class="dropdown pull-right" data-dropdown="dropdown">
-                                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Login <i class="icon-caret-down"></i></button>
+                                                <button class="btn btn-primary dropdown-toggle log-button" data-toggle="dropdown"><?php echo $username;?> <i class="icon-caret-down"></i></button>
 		                           
 										<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="padding: 15px; padding-bottom: 15px;">
 											<li><a href="../profile">My Profile</a></li>
