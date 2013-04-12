@@ -168,7 +168,7 @@
 
 
                   var profile_image = res[i]['image'];
-
+                  var child_id = res[i]['id'];
                   if (profile_image != 0) {
 
                       var image_data = {
@@ -183,12 +183,13 @@
 
                               if (result === "false") {
                                   //success action
-                                  $("#all_kids").append("<a href='' class='child_button' data-internalid='" + result[i]["child"] + "'><div class='image-container' style='width:50px;height:50px;'><img src='../assets/img/default_pic.png'></div></a>");
+                                  $("#all_kids").append("<a href='' class='child_button' data-internalid='" + child_id + "'><div class='image-container' style='width:50px;height:50px;'><img src='../assets/img/default_pic.png'></div></a>");
                               } else {
                                   //failure action
 
                                   for (var i = 0; i < result.length; i++) {
                                       $("#all_kids").append("<a href='' class='child_button' data-internalid='" + result[i]["child"] + "'><div class='image-container kid' style='width:50px;height:50px;'><img src='" + result[i]["location_thumb"] + "'></div></a>");
+                                      
                                       $(".kid img").load(function () {
                                           adjustImages();
                                       });
@@ -201,7 +202,7 @@
                           }
                       });
                   } else {
-                      $("#all_kids").append("<a href='' class='child_button' data-internalid='" + res[i]["child"] + "'><div class='image-container' style='width:50px;height:50px;'><img src='../assets/img/default_pic.png'></div></a>");
+                      $("#all_kids").append("<a href='' class='child_button' data-internalid='" +child_id + "'><div class='image-container' style='width:50px;height:50px;'><img src='../assets/img/default_pic.png'></div></a>");
 
 
 
@@ -224,7 +225,6 @@
 
   function getChildData() {
       $("#all").fadeOut("fast", function () {
-
 
           var data = {
               child: current_kid,
@@ -251,7 +251,6 @@
                               }, 500);
                           });
                       });
-
                   } else {
 
                       $("#feed").empty();
@@ -433,11 +432,15 @@
 
 
   function triggerStuff() {
-  			var new_number = number *(362+5);        
+  			             
+                      	var new_number;
+                      	if(number != 0)
+	                      	new_number = number *(362+5);        
+                      	else
+	                      	new_number = 362+5;          
   			  $("#line").attr("y2", new_number);
           $("#bottom_circle").attr("cy", new_number);
           $("#myline").css("height", new_number+20);
-   		console.log(new_number);                   
                       
   	$(".year_button").unbind("click");
 
@@ -513,10 +516,12 @@
           event.preventDefault();
 
           var id = $(this).attr("data-internalid");
+          
           $(".child_button").each(function () {
               if ($(this).attr("data-internalid") === id) {
+              
+                                current_kid = id;
                   number = 0;
-                  current_kid = id;
                   getChildData();
               }
 
@@ -697,7 +702,12 @@
                               
                       number--;
                       
-                      	var new_number = number *(362+5);        
+                      	var new_number;
+                      	if(number != 0)
+	                      	new_number = number *(362+5);        
+                      	else
+	                      	new_number = 362+5;        
+                      	
   			  $("#line").attr("y2", new_number);
           $("#bottom_circle").attr("cy", new_number);
           $("#myline").css("height", new_number+20);
@@ -932,7 +942,6 @@
             var milestone = $("#milestone_select").val();
             var date = $("#date_change").val();
 
-      console.log(current_photo);
 
       var data = {
           id: current_photo,
