@@ -1,7 +1,9 @@
- <?php session_start();if(!$_SESSION['user']){header('Location: ../');}?>
+ <?php session_start();
+ if(!$_SESSION['user']){
+ header('Location: ../');
+ }?>
 
 <?php include("../snippets/header.php");?>
-
 
 <?php include("../scripts/dbconnect.php");?>
 <?php include("../scripts/user-info.php");?>
@@ -132,12 +134,8 @@
 					</div>
 			</div>
 			<div class="span3" id='info' >
-					<button class="btn btn-primary btn-large input-block-level" id ="new_photo_button">New Photo</button>
-									<hr>
+	
 
-				<button class="btn btn-success btn-large input-block-level" id ="new_kid_button">New Kid</button>
-								
-					<hr>
 				
 									<div class="row-fluid">
 
@@ -178,7 +176,6 @@
 
 			
 			
-				<button class="btn btn-warning btn-large input-block-level" id ="edit_kid_button">Edit Kid</button>		
 				<hr>		
 				
 	</div>

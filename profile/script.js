@@ -368,7 +368,7 @@
                   var html = '<div class="image-wrapper" data-internalid="' + res[i]["id"] + '">' +
                       '<div class="preview">' +
                       '<a href="" class="image_button" data-image="' + res[i]["location"] + '"><div class="image-container" style="width:362px; height:362px;">' +
-                      '<img class="image" data-internalid="' + res[i]["id"] + '" src = "' + res[i]['location'] + '">' +
+                      '<img class="image" data-internalid="' + res[i]["id"] + '" src = "' + res[i]['location_small'] + '">' +
                       '</div></a>' +
                       '</div>' +
                       '</div>';
@@ -693,23 +693,31 @@
                       $(".item").each(function () {
                           if ($(this).attr("data-internalid") === id) {
 
-                              $(this).fadeOut("fast", function () {
-                                  if (number == 0) {
+                              $(this).fadeOut(function () {
+                              
+                      number--;
+                      
+                      	var new_number = number *(362+5);        
+  			  $("#line").attr("y2", new_number);
+          $("#bottom_circle").attr("cy", new_number);
+          $("#myline").css("height", new_number+20);
+
+                              
+                              
+                               if (number == 0) {
                                       $("#profile_pic").html("<img src='../assets/img/default_pic.png'>");
                                       $("#child_name").empty();
                                       $("#child_birthday").empty();
 
                                       $("#feed").html('<div class="row-fluid"><div class="span4"><div style="width:100%;height:150px;float:left; background:white;"></div></div><div class="span8"><div style="width:100%;height:362px;float:left; background:white;"></div></div></div>');
-                                  }
-                              });
-                          }
-                      });
+		                                  }
+		                              });
+		                          }
+		                      });
 
 
 
-                      button.parent(".buttons").parent(".text-wrapper").fadeOut();
-                      number--;
-
+                     
                       if (res == true) {
                           //success action
 

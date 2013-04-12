@@ -44,7 +44,7 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 			list($txt, $ext) = explode(".", $name);
 			if(in_array($ext,$valid_formats))
 			{
-				if($width > 200 || $height > 200){
+				if($width > 362 || $height > 362){
 
 			
 		
@@ -60,18 +60,18 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 						 $image->load("../uploads/profile/images/".$actual_image_name);
 						
 						if($width > $height){
-							
-						   $image->resizeToWidth(200);
-						   $image->save("../uploads/profile/images/small/".$actual_image_name);
-						   $image->resizeToWidth(100);
-						   $image->save("../uploads/profile/images/thumb/".$actual_image_name);
-							
-						}else{
-							
-						   $image->resizeToHeight(200);
+							  $image->resizeToHeight(362);
 						   $image->save("../uploads/profile/images/small/".$actual_image_name);
 						   $image->resizeToHeight(100);
 						   $image->save("../uploads/profile/images/thumb/".$actual_image_name);
+						 
+							
+						}else{
+							  $image->resizeToWidth(362);
+						   $image->save("../uploads/profile/images/small/".$actual_image_name);
+						   $image->resizeToWidth(100);
+						   $image->save("../uploads/profile/images/thumb/".$actual_image_name);
+						 
 							
 						}
 						$datetime = date("Y-m-d H:i:s");
@@ -89,7 +89,7 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 						exit_status("failed");
 		
 			}else
-				exit_status(  "image must be greater than 200px");
+				exit_status(  "image must be greater than 362px");
 			}
 			else
 				exit_status(  "Invalid file format..");

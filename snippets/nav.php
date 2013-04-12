@@ -36,7 +36,12 @@
                  <!--IF USER IS LOGGED IN-->
                 <div class="nav-collapse <?php if(!$_SESSION['user']){echo "hide";} ?>" id="nav-items">
                     <ul id="nav" class="pull-right">
-                        <li>
+                    
+                    					<li><button class="btn btn-primary input-block-level" id ="new_photo_button">New Photo</button></li>
+
+				<li><button class="btn btn-success input-block-level" id ="new_kid_button">New Kid</button></li>
+												<li><button class="btn btn-warning input-block-level" id ="edit_kid_button">Edit Kid</button>	</li>
+                    
                         		<li class="dropdown pull-right" data-dropdown="dropdown">
                                                 <button class="btn btn-primary dropdown-toggle log-button" data-toggle="dropdown"><?php echo $username;?> <i class="icon-caret-down"></i></button>
 		                           
@@ -47,7 +52,6 @@
 										</ul>
 		                        </li>
 
-                        </li>
                         
 
                     </ul>
