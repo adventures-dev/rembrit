@@ -8,6 +8,12 @@
 	padding: 5px;
 	text-align: center;
 }
+#timeline .months li{
+	background: transparent;
+	text-align: left;
+	font-size: smaller;
+	
+}
 #timeline .active{
 	background: #dfdfdf;
 	

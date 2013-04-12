@@ -5,6 +5,7 @@
   var current_photo;
   var milestones;
   var selected_year;
+  var selected_month;
   $(document).ready(function () {
 	  getMilestones();
       getChildData();
@@ -53,6 +54,7 @@
 	            var current_date = new Date();
 	            
 	            var current_year = current_date.getFullYear();
+	            var current_month = current_date.getMonth()+1;
 
 	            var old_date = new Date(res);
 	            var old_year = old_date.getFullYear();
@@ -60,20 +62,40 @@
 	            if(selected_year == null){
 		            selected_year = current_year;
 	            }
+	            if(selected_month == null){
+		            selected_month = current_month;
+	            }
+	            
 	            $("#timeline").empty();
+	            
+	          	            		
 	            for(var i = current_year; i>=old_year; i--){
-		            if(i == selected_year){
-			            $("#timeline").append("<a href='' class='year_button' data-year='"+i+"'><li class='active'>"+i+"</li></a>");
+	            
+	            	  var months = "<div class='months hide'><a href='' class='month_button' data-month='11' data-year='"+i+"'><li>December</li></a>"+
+	            	  	            		"<a href='' class='month_button' data-month='11' data-year='"+i+"'><li>November</li></a>"+
+	            		"<a href='' class='month_button' data-month='10' data-year='"+i+"'><li>October</li></a>"+
+	            		"<a href='' class='month_button' data-month='9' data-year='"+i+"'><li>September</li></a>"+
+	            		"<a href='' class='month_button' data-month='8' data-year='"+i+"'><li>August</li></a>"+
+	            		"<a href='' class='month_button' data-month='7' data-year='"+i+"'><li>July</li></a>"+
+	            		"<a href='' class='month_button' data-month='6' data-year='"+i+"'><li>June</li></a>"+
+	            		"<a href='' class='month_button' data-month='5' data-year='"+i+"'><li>May</li></a>"+
+	            		"<a href='' class='month_button' data-month='4' data-year='"+i+"'><li>April</li></a>"+
+	            		"<a href='' class='month_button' data-month='3' data-year='"+i+"'><li>March</li></a>"+
 
+		            		"<a href='' class='month_button' data-month='2' data-year='"+i+"'><li>Febuary</li></a>"+
+            		"<a href='' class='month_button' data-month='1' data-year='"+i+"'><li>January</li></a></div>";
+	            
+		            if(i == selected_year){
+			            $("#timeline").append("<div class='year'><a href='' class='year_button' data-year='"+i+"'><li class='active year'>"+i+"</li></a>"+months+"</div>");
 		            }else{
-			            $("#timeline").append("<a href='' class='year_button' data-year='"+i+"'><li>"+i+"</li></a>");
+			            $("#timeline").append("<div class='year'><a href='' class='year_button' data-year='"+i+"'><li class='year'>"+i+"</li></a>"+months+"</div>");
 
 		            }
 		            
 	            }
-	            
-	            triggerStuff();
-	            	              $(".image-container").each(function () {
+	            	triggerStuff();
+	            	
+	            	  $(".image-container").each(function () {
 	                  $(this).load(function () {
 	                      adjustImages();
 	                  });
@@ -313,9 +335,11 @@
           ///include all post data in this array
           number: number,
           child: current_kid,
-           year: selected_year
+           year: selected_year,
+           month:selected_month
 
       };
+      console.log(selected_month);
 
       //insert loading icon here
 
@@ -351,8 +375,8 @@
                       '</div></a>' +
                       '</div>' +
                       '</div>';
-                      var dateme = res[i]['date'];
-                      var dateArray = dateme.split("-")
+                  var dateme = res[i]['date'];
+                  var dateArray = dateme.split("-")
                   var now = new Date(dateArray[0], dateArray[1]-1, dateArray[2]);
                   //var	date = prettyDate(then);
                   var formated_date = (now.getMonth()+1) +"/"+now.getDate()+"/"+now.getFullYear();
@@ -411,13 +435,31 @@
 
   function triggerStuff() {
   
-  	 	 $(".year_button").unbind("click");
+  	$(".year_button").unbind("click");
 
-      $(".year_button").click(function (event) {
+      $(".year_button").click(function(event) {
+            event.preventDefault();
+
+              if ($(this).siblings(".months").is(":visible")){
+	              $(this).siblings(".months").slideUp();
+
+              }else{
+                            
+			      $(this).siblings(".months").slideDown();
+
+ 
+              }
+              
+              });
+  
+  
+  	 	$(".month_button").unbind("click");
+
+      $(".month_button").click(function (event) {
           event.preventDefault();
           selected_year = $(this).attr("data-year");
+          selected_month = $(this).attr("data-month");
 
-          
           number = 0;
           getChildData();
 

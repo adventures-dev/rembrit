@@ -11,8 +11,8 @@ $number = $_POST['number']; //required
 $limitnumber = 24; //edit limitnumber if you wish to load more
 
 if(isset($_POST['year']) && $_POST['year'] != null && $_POST['year'] != ""){
-
-	$year = $_POST['year']."-12-31";
+	$month = $_POST['month'];
+	$year = $_POST['year']."-".$month."-31";
 
 
 	$data = mysql_query("SELECT * FROM profile WHERE user = '$id' AND child = '$child' AND date < '$year' ORDER BY date DESC, datetime DESC LIMIT " . $number . ", $limitnumber") or die(mysql_error());
