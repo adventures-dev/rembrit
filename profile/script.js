@@ -339,7 +339,6 @@
            month:selected_month
 
       };
-      console.log(selected_month);
 
       //insert loading icon here
 
