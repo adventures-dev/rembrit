@@ -15,8 +15,10 @@
 	$datetime = date("Y-m-d H:i:s");
 	$child = $_POST['child'];
 	
-	mysql_query("INSERT INTO answers (child, question, answer, date) VALUES ('$child', '$question', '".mysql_real_escape_string($answer)."', '$datetime')")or die(mysql_error());
+	if($answer != "" && $answer != null){
 	
+	mysql_query("INSERT INTO answers (child, question, answer, date) VALUES ('$child', '$question', '".mysql_real_escape_string($answer)."', '$datetime')")or die(mysql_error());
+	}
 	echo true;
 
 ?>
