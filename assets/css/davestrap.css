@@ -22,8 +22,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 header{
-	padding: 10px;
-	background: #09e2e5;
+	background: #24595f;
+	height: 44px;
+}
+header .container{
+
 }
 header a, header strong{
 	color: white;
@@ -46,16 +49,20 @@ a:hover{
 }
 
 #nav {
+	border-right:1px solid #2f7179;
+
+		border-left:1px solid #173a40;
+
 }
 
 #nav li {
     float: left;
-    margin: 5px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
     list-style: none;
 }
 
 #nav a{
-    padding: 10px 20px;
+    padding: 0px 0px;
 
 }
 

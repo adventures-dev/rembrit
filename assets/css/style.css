@@ -121,7 +121,7 @@
 .text-wrapper {
 	position: relative;
 	background: #fffafa;
-	border: 2px solid #09e2e5;
+	border: 2px solid #24595f;
 	border-radius: 3px;
 }
 .text-wrapper:after, .text-wrapper:before {
@@ -143,7 +143,7 @@
 }
 .text-wrapper:before {
 	border-color: rgba(189, 189, 189, 0);
-	border-right-color: #09e2e5;
+	border-right-color: #24595f;
 	border-width: 13px;
 	top: 50%;
 	margin-top: -13px;
@@ -405,9 +405,26 @@ a.boxclose{
 }
 
 #line{
-	stroke:#09e2e5;
+	stroke:#24595f;
 	stroke-width:5;
-	border: 2px solid #4b4b4b;
 }
 #myline{
+}
+
+.top-button{
+	border-left:1px solid #2f7179;
+		border-right:1px solid #173a40;
+
+	text-align: center;
+	height: 34px;
+	padding: 5px;
+}
+
+.top-button a{
+	margin: 10px;
+}
+.log{
+	padding-top: 10px;
+		height: 29px;
+
 }

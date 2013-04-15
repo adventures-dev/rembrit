@@ -1,9 +1,9 @@
 <header>
     <div class="container">
         <div class="row-fluid">
-            <div class="span12">
+            <div class="span12 ">
+            
                 <div id="logo" class="pull-left">
-                	<a href="javascript:void(0)" id="invokeMenu-left" class="pull-left"><i class="icon-reorder"></i></a>
                     <a href="../" class="pull-left">
                        <h4>Rembr.it</h4>
 
@@ -12,38 +12,16 @@
 
                 </div>
                 
-                <!--IF USER IS NOT LOGGED IN-->
-                <div class="nav-collapse <?php if($_SESSION['user']){echo "hide";} ?>" id="nav-items">
-                    <ul id="nav" class="pull-right">
-        
-                        				<li class="dropdown pull-right" data-dropdown="dropdown">
-                                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In<i class="icon-caret-down"></i></a>
-
-                                            <div class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="padding: 15px; padding-bottom: 15px;">
-                                                <?php include("../snippets/login-form.php");?>
-                                                
-                                                <!-- FACEBOOK LOGIN BUTTON-->
-                                                <a href="javascript:void(0);" onclick="login();" class="input-block-level <?php if($use_facebook != true){echo "hidden";}?>"><img src="../assets/img/facebook_button.png"></a>
-                                                                                             
-                                                <a style="font-size:.7em" href="../forgot">Forgot your password?</a> <a style="font-size:.7em" href="../register">Register</a>
-                                            </div>
-                                        </li>
-
-                    </ul>
-                    <!-- nav -->
-                </div>
 
                  <!--IF USER IS LOGGED IN-->
-                <div class="nav-collapse <?php if(!$_SESSION['user']){echo "hide";} ?>" id="nav-items">
                     <ul id="nav" class="pull-right">
-                    
-                    					<li><button class="btn btn-primary input-block-level" id ="new_photo_button">New Photo</button></li>
+                    					<li class="top-button" ><a id ="edit_kid_button"><i class='icon-cogs icon-2x'></i></a>	</li>
+                    					<li class="top-button" ><a id ="new_kid_button"><i class='icon-plus-sign icon-2x'></i></a></li>
+                    					<li class="top-button" ><a id ="new_photo_button"><i class='icon-picture icon-2x'></i></a></li>
 
-				<li><button class="btn btn-success input-block-level" id ="new_kid_button">New Kid</button></li>
-												<li><button class="btn btn-warning input-block-level" id ="edit_kid_button">Edit Kid</button>	</li>
                     
-                        		<li class="dropdown pull-right" data-dropdown="dropdown">
-                                                <button class="btn btn-primary dropdown-toggle log-button" data-toggle="dropdown"><?php echo $username;?> <i class="icon-caret-down"></i></button>
+                        		<li class="dropdown pull-right top-button log" data-dropdown="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown"><?php echo $username;?> <i class="icon-caret-down"></i></a>
 		                           
 										<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="padding: 15px; padding-bottom: 15px;">
 											<li><a href="../profile">My Profile</a></li>
@@ -57,7 +35,6 @@
                     </ul>
                     <!-- nav -->
 
-                </div>
 
             </div>
             <!-- gride 12 -->

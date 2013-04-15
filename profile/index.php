@@ -126,9 +126,9 @@ header('Location: ../');
 		<div class="span1" id='myline'>
 			
 			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-				<circle id='top_circle' cx='30' cy='18' r='7'stroke-width='2' fill='#09e2e5' />
+				<circle id='top_circle' cx='30' cy='18' r='7'stroke-width='2' fill='#24595f' /> 
 				<line id='line' x1="30" y1="20" x2="30" y2="362"/>
-				<circle id='bottom_circle' cx='30' cy='362' r='7'stroke-width='2' fill='#09e2e5' />
+				<circle id='bottom_circle' cx='30' cy='362' r='7'stroke-width='2' fill='#24595f' />
 
   			</svg>
 			
