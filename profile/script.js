@@ -4,12 +4,14 @@
   var current_kid;
   var current_photo;
   var milestones;
+  var questions = [];
   var selected_year;
   var selected_month;
   $(document).ready(function () {
 	  getMilestones();
-      getChildData();
+	   getQuestions();
 
+      getChildData();
   });
 
   $(window).scroll(function () {
@@ -36,6 +38,25 @@
             }
             
             $("#milestone_select").html(milestones);
+
+        }
+    });
+  }
+  
+   function getQuestions(){
+	  
+	var data = {};
+    $.ajax({
+        type: "POST",
+        url: "questions.php",
+        data: data,
+        success: function (res) {
+            res = $.parseJSON(res);
+            for (var i = 0; i < res.length; i++) {
+                //use this section to display all the data, use some .append() or something
+                questions.push([res[i]['id'], res[i]['text']]); 
+            }
+            
 
         }
     });
@@ -941,13 +962,18 @@
       var text = $("#add_textarea").val();
             var milestone = $("#milestone_select").val();
             var date = $("#date_change").val();
+            var answer = $("#question_textarea").val();
+            var question = $("#question_value").val();
 
 
       var data = {
           id: current_photo,
           text: text,
           milestone: milestone,
-          date: date
+          date: date,
+          answer:answer,
+          question:question,
+          child: current_kid
           
 
       };
@@ -956,7 +982,6 @@
           url: "update-text.php",
           data: data,
           success: function (res) {
-
               $('#add_text_box').animate({
                   'top': '-1000px'
               }, 500, function () {
@@ -969,7 +994,8 @@
                       $("#add_textarea").val("");
                       $("#milestone_select").val("");
                          $("#date_change").val("");
-                   
+                          $("#question_textarea").val("");
+                
                       
 
                   });

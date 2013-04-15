@@ -21,6 +21,11 @@ $(document).ready(function () {
                 $('#new_photo_box').animate({
                     'top': '-1000px'
                 }, 500, function () {
+                
+                	var question = questions[Math.floor(Math.random()*questions.length)];	
+                	$("#question_textarea").attr("placeholder", question[1]);
+                	$("#question_value").val(question[0]);
+
                     $('#add_text_box').animate({
                         'top': '160px'
                     }, 500);
@@ -71,6 +76,11 @@ $(function () {
                 $('#new_photo_box').animate({
                     'top': '-1000px'
                 }, 500, function () {
+                       	var question = questions[Math.floor(Math.random()*questions.length)];	
+
+                	$("#question_textarea").attr("placeholder", question[1]);
+                	
+                	$("#question_value").val(question[0]);
                     $('#add_text_box').animate({
                         'top': '160px'
                     }, 500);

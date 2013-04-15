@@ -97,6 +97,9 @@ header('Location: ../');
 	 	<select id='milestone_select' class="input-block-level" name='milestone'></select>
 	 	<input class="input-block-level" type="text" id="date_change" name="date_change" placeholder="(mm/dd/yyyy)">
 
+
+	 	<textarea class='input-block-level'id="question_textarea" placeholder=""></textarea>
+	 	<input type="hidden" id="question_value">
 	 	<textarea class='input-block-level'id="add_textarea" placeholder="What is your kid doing?"></textarea><button class='btn' id="add_text_button">Add Story</button></div>
 	 	
 	 		
