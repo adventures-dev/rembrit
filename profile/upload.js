@@ -1,3 +1,44 @@
+$(document).ready(function () {
+    $('#image').on('change', function () {
+        $("#imageform").append('<i class="icon-spinner icon-spin"></i>');
+        
+        var data = {
+	        child:current_kid
+        }
+        $("#imageform").ajaxForm({
+        	data:data,
+        	clearForm: true,
+        	success: function(res){
+        	console.log(res);
+        	 $('#new_photo_box').animate({
+                'top': '-1000px'
+            }, 500, function () {
+	            
+                current_photo = res;
+                var date =  new Date();
+                var date = (date.getMonth()+1) +"/"+date.getDate()+"/"+date.getFullYear();
+                $("#date_change").val(date);
+                $('#new_photo_box').animate({
+                    'top': '-1000px'
+                }, 500, function () {
+                    $('#add_text_box').animate({
+                        'top': '160px'
+                    }, 500);
+                });
+
+
+                $("#imageform div").remove(".spinner");
+
+            });
+
+	        	
+        	}
+        
+        }).submit();
+    });
+});
+
+
 $(function () {
 
     var dropbox = $('#new_photo_dropbox'),
@@ -12,6 +53,7 @@ $(function () {
         data: {
             child: function () {
                 return current_kid;
+                
             },
         },
         uploadFinished: function (i, file, response) {

@@ -1,7 +1,7 @@
- <?php session_start();
- if(!$_SESSION['user']){
- header('Location: ../');
- }?>
+<?php session_start();
+if(!$_SESSION['user']){
+header('Location: ../');
+}?>
 
 <?php include("../snippets/header.php");?>
 
@@ -66,7 +66,13 @@
 	 <div class="row-fluid">
 	 	<div class="span6">
 	 		<h4>Header</h4>
-	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	 		<form id="imageform" method="post" enctype="multipart/form-data" action='upload.php'>
+		 		Image: <input type="file" name="image" id="image" />
+		 	</form>
+
+	 		
+	 		
 	 	</div>
 	 	<div class="span6">
 	 	
