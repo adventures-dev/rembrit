@@ -1,4 +1,8 @@
 
+#mainpage-main{
+		background: url('../img/rembrbg-tile.jpg');
+	background-repeat: repeat-x;
+}
 #timeline li{
 	list-style: none;
 	width: 100%;
@@ -27,6 +31,7 @@
 	font-size: small;
 	text-align: left;
 	padding: 0px 1px;
+	
 	
 }
 .buttons{
@@ -346,16 +351,15 @@ a.boxclose{
 	padding: 20px;
 }
 .top-bg{
-	
 }
 .top-bg h1{
 	font-size: 45pt;
-	padding: 40px;
+	padding: 0px 0px 40px;
 	font-family: "Noteworthy";
 }
 .top-bg h3{
 	font-size: 20pt;
-	padding: 15px;
+	padding: 0px 0px 15px;
 }
 .register-form{
 	

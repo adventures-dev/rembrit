@@ -42,7 +42,7 @@
            <div id='wrap'><!-- actually I'll tell you what they do if you want.  These combined with the davestrap css allows a sticky footer (a footer that sticks to the f&*@ing bottom)-->
                 <div id='main'><!-- just make sure you close them out before the <footer>-->
                    
-        <div id="mainpage"><!-- this is the content that slides over during responsive cases-->
+        <div id="mainpage-main"><!-- this is the content that slides over during responsive cases-->
         
         	<!--don't worry about the next two divs.  just make sure you use them in every single webpage you make for the rest of your life. nbd-->
 
