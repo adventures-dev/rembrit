@@ -73,7 +73,7 @@
                             <div class="row-fluid">
 	                            <div class="span12 center">
 	                            	<h1>Rembr.it</h1>
-	                            	<h3>Every precious moment.<br>All in one place.</h3>
+	                            	<h3>Because you know they<br>grow up too quick.</h3>
 	                            	
 	                            	
 	                            </div>
