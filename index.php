@@ -100,16 +100,16 @@
                     		<div class="span10">
                     			<div class="row-fluid">
                     			<div class="span4">
-                    				<h4>Header</h4>
-                    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                    				<h4>Easy:</h4>
+                    				<p>You are busier than ever and do not have time to spend hours organizing your digital memories.  GIve us 2 minutes a week and Rembr.it will make sure you will be able to look back and remember your kids as they grow up.</p>
                     			</div>
                     			<div class="span4">
-                    				<h4>Header</h4>
-                    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                    				<h4>Private:</h4>
+                    				<p>While we live most of our digital lives on Facebook and Twitter those are not necessarily the places you want to post all of your families private memories.  Rembr.it is a private place to store all of those little moments that you never want to forget.</p>
                     			</div>
                     			<div class="span4">
-                    				<h4>Header</h4>
-                    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                    				<h4>Secure:</h4>
+                    				<p>Don't worry about your computer or phone breaking and loosing all of your memories.  Rembr.it is cloud based and always backed up so your memories will be safe.</p>
                     			</div>
                     			</div>
                     		</div>
