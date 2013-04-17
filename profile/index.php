@@ -18,8 +18,8 @@ header('Location: ../');
 	 <h2>New Kid</h2>
 	 <div class="row-fluid">
 	 	<div class="span6">
-	 		<h4>Header</h4>
-	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+	 		<h4>You've been busy?</h4>
+	 		<p>A new kid and a new journey.  Add your child's basic information here.</p>
 	 	</div>
 	 	<div class="span6">
 	 		
@@ -40,8 +40,7 @@ header('Location: ../');
 	 <h2>Edit Kid</h2>
 	 <div class="row-fluid">
 	 	<div class="span6">
-	 		<h4>Header</h4>
-	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+	 		<p>Sometimes kids change their name, sometimes you forget their birthday. Either way we got you.  You can even get rid of your kids when you're tired of them.</p>
 	 						<button class="btn btn-danger btn-large input-block-level" id ="delete_kid_button">Delete Kid</button>
 
 	 	</div>
@@ -65,8 +64,8 @@ header('Location: ../');
 	 <h2>Add Photo</h2>
 	 <div class="row-fluid">
 	 	<div class="span6">
-	 		<h4>Header</h4>
-	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	 		<h4>Upload</h4>
+	 		<p>Select a photo to upload!</p>
 	 		<form id="imageform" method="post" enctype="multipart/form-data" action='upload.php'>
 		 		Image: <input type="file" name="image" id="image" />
 		 	</form>
@@ -90,11 +89,10 @@ header('Location: ../');
 	 <h2>Add Text</h2>
 	 <div class="row-fluid">
 	 	<div class="span6">
-	 		<h4>Header</h4>
-	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+	 		<p>Tell us what happened!  A picture is worth a thousand words, but write something anyway.</p>
 	 	</div>
 	 	<div class="span6">
-	 	<select id='milestone_select' class="input-block-level" name='milestone'></select>
+	 	<!--<select id='milestone_select' class="input-block-level" name='milestone'></select>-->
 	 	<input class="input-block-level" type="text" id="date_change" name="date_change" placeholder="(mm/dd/yyyy)">
 
 

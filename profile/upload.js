@@ -62,7 +62,6 @@ $(function () {
             },
         },
         uploadFinished: function (i, file, response) {
-
             $(".progressHolder").remove();
 
             $('#new_photo_box').animate({

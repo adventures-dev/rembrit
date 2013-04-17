@@ -42,8 +42,7 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 		{
 					
 			list($txt, $ext) = explode(".", $name);
-			if(in_array($ext,$valid_formats))
-			{
+
 				if($width > 362 || $height > 362){
 
 			
@@ -90,10 +89,7 @@ if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
 		
 			}else
 				exit_status(  "image must be greater than 362px");
-			}
-			else
-				exit_status(  "Invalid file format..");
-		
+
 		
 		
 		

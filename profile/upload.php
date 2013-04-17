@@ -25,9 +25,7 @@ $child = $_POST['child'];
 			if($width > 362 || $height > 362){
 		
 			list($txt, $ext) = explode(".", $name);
-			if(in_array($ext,$valid_formats))
-			{
-	
+
 					$datetime = date("Y-m-d-H-i-s");
 					$actual_image_name = $id."-".$datetime.".".$ext;
 					$tmp = $_FILES['image']['tmp_name'];
@@ -75,9 +73,6 @@ $child = $_POST['child'];
 					else
 						echo "failed";
 	
-			}
-			else
-				echo "Invalid file format..";
 		}else
 			echo "image must be greater than 400px";
 		

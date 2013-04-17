@@ -8,7 +8,7 @@
   var selected_year;
   var selected_month;
   $(document).ready(function () {
-	  getMilestones();
+	  //getMilestones();
 	   getQuestions();
 
       getChildData();
@@ -282,7 +282,7 @@
                           
                           getTimeLine();
                           getAllKids();
-                          getCurrentMilestones();
+                          //getCurrentMilestones();
 
                           var profile_image = res[i]['image'];
 
@@ -398,10 +398,10 @@
                   //var	date = prettyDate(then);
                   var formated_date = (now.getMonth()+1) +"/"+now.getDate()+"/"+now.getFullYear();
                   var date = now.toDateString();
-
+                  var milestone_select = "<select class='side_milestones input-block-level' data-internalid='" + res[i]["id"] + "'>"+milestones+"</select>";
                   var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
                   var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p><i class='icon-time'></i> " + date + "</p><p>" + res[i]["text"] + "</p><p>"+milestone_icon+"</p></div>";
-                  var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><select class='side_milestones input-block-level' data-internalid='" + res[i]["id"] + "'>"+milestones+"</select><input class='input-block-level edit_date_change' data-internalid='" + res[i]["id"] + "' type='text' name='edit_date_change' placeholder='(mm/dd/yyyy)' value='"+formated_date+"'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>" + res[i]["text"] + "</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
+                  var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><input class='input-block-level edit_date_change' data-internalid='" + res[i]["id"] + "' type='text' name='edit_date_change' placeholder='(mm/dd/yyyy)' value='"+formated_date+"'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>" + res[i]["text"] + "</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
 
                   var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">' +
                       text + textbox + buttons +
