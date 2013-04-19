@@ -8,7 +8,11 @@
   var selected_year;
   var selected_month;
   $(document).ready(function () {
+<<<<<<< HEAD
 	  //getMilestones();
+=======
+	 // getMilestones();
+>>>>>>> changed some stuff
 	   getQuestions();
 
       getChildData();
@@ -54,7 +58,7 @@
             res = $.parseJSON(res);
             for (var i = 0; i < res.length; i++) {
                 //use this section to display all the data, use some .append() or something
-                questions.push([res[i]['id'], res[i]['text']]); 
+                questions.push([res[i]['id'], res[i]['question_text']]); 
             }
             
 
@@ -282,7 +286,11 @@
                           
                           getTimeLine();
                           getAllKids();
+<<<<<<< HEAD
                           //getCurrentMilestones();
+=======
+                         // getCurrentMilestones();
+>>>>>>> changed some stuff
 
                           var profile_image = res[i]['image'];
 
@@ -323,7 +331,10 @@
     
                           }
                           var date = res[i]['birthday'];
-                          date = date.toString();
+                                            var dateArray = date.split("-")
+                                            var now = new Date(dateArray[0], dateArray[1]-1, dateArray[2]);
+
+                          date = now.toDateString();
                           $("#child_name").html("<h4>" + res[i]['firstname'] + " " + res[i]["lastname"] + "</h4>");
                           $("#child_birthday").html("<p>" + date +"</p>");
                           
@@ -365,11 +376,11 @@
           url: "profile_data.php", //example script can be anything
           data: data,
           success: function (res) {
+
               res = $.parseJSON(res);
               $("#feed div").remove(".spinner"); //remove loading icon here
               for (var i = 0; i < res.length; i++) {
                   //use this section to display all the data, use some .append() or something
-                  
                   var milestone_icon;
                   
                   switch (parseInt(res[i]['milestone']))
@@ -400,11 +411,21 @@
                   var date = now.toDateString();
                   var milestone_select = "<select class='side_milestones input-block-level' data-internalid='" + res[i]["id"] + "'>"+milestones+"</select>";
                   var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
+<<<<<<< HEAD
                   var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p><i class='icon-time'></i> " + date + "</p><p>" + res[i]["text"] + "</p><p>"+milestone_icon+"</p></div>";
+=======
+                  var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p><i class='icon-time'></i> " + date + "</p><p>" + res[i]["text"] + "</p></div>";
+                  var question_answer = "";
+                  if(res[i]["answer"] != null){
+	                  question_answer = "<div class='question_answer'><p>"+res[i]["question_text"]+": "+res[i]["answer"]+"</p></div>";
+	                  
+                  }
+                  
+>>>>>>> changed some stuff
                   var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><input class='input-block-level edit_date_change' data-internalid='" + res[i]["id"] + "' type='text' name='edit_date_change' placeholder='(mm/dd/yyyy)' value='"+formated_date+"'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>" + res[i]["text"] + "</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
 
                   var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">' +
-                      text + textbox + buttons +
+                      text +question_answer+ textbox + buttons +
 
                   '</div>';
 

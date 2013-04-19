@@ -14,10 +14,10 @@ if(isset($_POST['year']) && $_POST['year'] != null && $_POST['year'] != ""){
 	$month = $_POST['month'];
 	$year = $_POST['year']."-".$month."-31";
 	
-	$data = mysql_query("SELECT * FROM profile WHERE user = '$id' AND child = '$child' AND date < '$year' ORDER BY date DESC, datetime DESC LIMIT " . $number . ", $limitnumber") or die(mysql_error());
+	$data = mysql_query("SELECT profile.*, questions.question_text, answers.answer FROM profile LEFT JOIN answers ON answers.post = profile.id LEFT JOIN questions ON questions.id = answers.question WHERE profile.user = '$id' AND profile.child = '$child' AND profile.date < '$year' ORDER BY profile.date DESC, profile.datetime DESC LIMIT " . $number . ", $limitnumber") or die(mysql_error());
 
 }else{
-	$data = mysql_query("SELECT * FROM profile WHERE user = '$id' AND child = '$child' ORDER BY date DESC, datetime DESC LIMIT " . $number . ", $limitnumber") or die(mysql_error());
+	$data = mysql_query("SELECT profile.*, questions.question_text, answers.answer FROM profile LEFT JOIN answers ON answers.post = profile.id LEFT JOIN questions ON questions.id = answers.question WHERE profile.user = '$id' AND profile.child = '$child'  ORDER BY profile.date DESC, profile.datetime DESC LIMIT " . $number . ", $limitnumber") or die(mysql_error());
 
 }
 

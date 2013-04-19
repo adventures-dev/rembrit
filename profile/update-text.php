@@ -17,7 +17,7 @@
 	
 	if($answer != "" && $answer != null){
 	
-	mysql_query("INSERT INTO answers (child, question, answer, date) VALUES ('$child', '$question', '".mysql_real_escape_string($answer)."', '$datetime')")or die(mysql_error());
+	mysql_query("INSERT INTO answers (child, question, answer, post, date) VALUES ('$child', '$question', '".mysql_real_escape_string($answer)."', '$id', '$datetime')")or die(mysql_error());
 	}
 	echo true;
 
