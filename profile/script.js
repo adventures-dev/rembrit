@@ -8,11 +8,7 @@
   var selected_year;
   var selected_month;
   $(document).ready(function () {
-<<<<<<< HEAD
-	  //getMilestones();
-=======
-	 // getMilestones();
->>>>>>> changed some stuff
+
 	   getQuestions();
 
       getChildData();
@@ -25,6 +21,33 @@
       }
 
   });
+  
+    function getRecentQuestions(){
+	  $("#recent_questions").empty();
+	var data = {
+		child:current_kid
+	};
+    $.ajax({
+        type: "POST",
+        url: "get_recent_questions.php",
+        data: data,
+        success: function (res) {
+            res = $.parseJSON(res);
+           if(res.length != 0){
+	           
+	           $("#recent_questions").append("<h4>Recent Questions</h4>");
+           }
+            for (var i = 0; i < res.length; i++) {
+                //use this section to display all the data, use some .append() or something
+                $("#recent_questions").append("<hr><p>"+res[i]['question_text']+"<br>"+res[i]["answer"]+"</p>");
+
+            }
+            
+
+        }
+    });
+  }
+  
   
   function getMilestones(){
 	  
@@ -286,11 +309,11 @@
                           
                           getTimeLine();
                           getAllKids();
-<<<<<<< HEAD
+                                getRecentQuestions();
+
                           //getCurrentMilestones();
-=======
                          // getCurrentMilestones();
->>>>>>> changed some stuff
+
 
                           var profile_image = res[i]['image'];
 
@@ -411,9 +434,7 @@
                   var date = now.toDateString();
                   var milestone_select = "<select class='side_milestones input-block-level' data-internalid='" + res[i]["id"] + "'>"+milestones+"</select>";
                   var buttons = '<div class="buttons"><a href="" class="edit_button" data-internalid="' + res[i]["id"] + '"><i class="icon-edit"></i> edit</a> <a href="" class="delete_button" data-internalid="' + res[i]["id"] + '"><i class="icon-minus-sign"></i> delete</a></div>';
-<<<<<<< HEAD
                   var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p><i class='icon-time'></i> " + date + "</p><p>" + res[i]["text"] + "</p><p>"+milestone_icon+"</p></div>";
-=======
                   var text = "<div class='side_text' data-internalid='" + res[i]["id"] + "'><p><i class='icon-time'></i> " + date + "</p><p>" + res[i]["text"] + "</p></div>";
                   var question_answer = "";
                   if(res[i]["answer"] != null){
@@ -421,7 +442,6 @@
 	                  
                   }
                   
->>>>>>> changed some stuff
                   var textbox = "<div class='side_textbox hide' data-internalid='" + res[i]["id"] + "'><input class='input-block-level edit_date_change' data-internalid='" + res[i]["id"] + "' type='text' name='edit_date_change' placeholder='(mm/dd/yyyy)' value='"+formated_date+"'><textarea class='input-block-level side_textarea' data-internalid='" + res[i]["id"] + "'>" + res[i]["text"] + "</textarea><button class='btn side_textbutton' data-internalid='" + res[i]["id"] + "'>Edit</button></div>";
 
                   var sidehtml = '<div class="text-wrapper" data-internalid="' + res[i]["id"] + '">' +

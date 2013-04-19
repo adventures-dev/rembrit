@@ -92,10 +92,7 @@ header('Location: ../');
 	 		<p>Tell us what happened!  A picture is worth a thousand words, but write something anyway.</p>
 	 	</div>
 	 	<div class="span6">
-<<<<<<< HEAD
 	 	<!--<select id='milestone_select' class="input-block-level" name='milestone'></select>-->
-=======
->>>>>>> changed some stuff
 	 	<input class="input-block-level" type="text" id="date_change" name="date_change" placeholder="(mm/dd/yyyy)">
 
 
@@ -178,7 +175,9 @@ header('Location: ../');
 							<div id="all_milestones">
 		
 						</div>
-						
+							<div id="recent_questions">
+		
+						</div>
 						
 						</div>
 														</div>

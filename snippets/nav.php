@@ -1,8 +1,8 @@
-<header>
-    <div class="container">
+<header id='topbar'>
+    <div class="container" >
         <div class="row-fluid">
             <div class="span12 ">
-            
+            	<div >
                 <div id="logo" class="pull-left">
                     <a href="../" class="pull-left">
                        <h4>Rembr.it</h4>
@@ -35,7 +35,7 @@
                     </ul>
                     <!-- nav -->
 
-
+            	</div>
             </div>
             <!-- gride 12 -->
         </div>
